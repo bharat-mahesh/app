@@ -34,7 +34,7 @@ const HomeScreen1 = ( props ) => {
             <AppButton title="Get Started" />
 
             <View style={styles.bottomSection}>
-                <Icon name="arrow-right" size={40} backgroundColor={colors.primary} onPress={() => console.log("hello")} />
+                <Icon name="arrow-right" size={40} backgroundColor={colors.primary} onPress={() => console.log("move to next page ig")} />
 
                 <AppText style={styles.bottomText}> How it Works </AppText>
             </View>

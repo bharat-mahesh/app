@@ -6,20 +6,17 @@ import Screen from '../components/Screen';
 import ProfileCard from '../components/ProfileCard';
 
 import colors from '../configs/colors';
+
 import AppText from '../components/Text';
+import ScreenHeader from '../components/ScreenHeader';
+import VerificationPopup from '../components/VerificationPopup';
 
 const ProfileScreen = ( props ) => {
     return (
         <Screen style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
-                <View style={styles.topSection}>
 
-                    <TouchableOpacity style={styles.back} onPress={() => console.log("Back Pressed")}>
-                        <MaterialCommunityIcons name="arrow-left" size={30} />
-                    </TouchableOpacity>
-
-                    <AppText style={styles.header}>Profile</AppText>
-                </View>
+                <ScreenHeader title="Profile" onPress={() => console.log("Back Pressed")} />
 
                 <ProfileCard
                     iconName="account-edit"
@@ -66,6 +63,9 @@ const ProfileScreen = ( props ) => {
                     </TouchableOpacity>
 
                 </View>
+
+                <VerificationPopup />
+
             </ScrollView>
         </Screen>
     );
@@ -74,24 +74,6 @@ const ProfileScreen = ( props ) => {
 const styles = StyleSheet.create({
     container: {
         paddingHorizontal: 10,
-    },
-
-    topSection: {
-        paddingVertical: 15,
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "100%",
-    },
-
-    back: {
-        right: Dimensions.get('window').width * 0.3 ,
-    },
-
-    header: {
-        right: 20,  // 20 because 40 is the diameter of the icon present in the same container
-        textAlign: "center",
-        fontSize: 30,
     },
 
     bottomSection: {

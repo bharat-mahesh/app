@@ -1,15 +1,48 @@
-import { View, StyleSheet, TextInput, Platform } from 'react-native';
+import { useState, useEffect } from 'react';
+
+import { View, StyleSheet, TextInput, Platform, TouchableOpacity } from 'react-native';
+
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
 import colors from '../configs/colors';
 
 const AppTextInput = ({ icon, ...otherProps }) => {
+
+    const [isPass, setIsPass] = useState(false);
+    const [hidePass, setHidePass] = useState(true);
+
+    useEffect(() => {
+        setIsPass(otherProps["secureTextEntry"] == true ? true : false);
+    }, []);
+
     return (
         <View style={styles.container}>
             
             {icon && <MaterialCommunityIcons style={styles.icon} name={icon} size={20} color={colors.medium} />}
 
-            <TextInput style={styles.textInput} {...otherProps} />
+            <TextInput style={styles.textInput} {...otherProps} secureTextEntry={ isPass == true ? hidePass : false } />
+
+            {
+                isPass == true
+                ?
+                (
+                    <TouchableOpacity onPress={() => setHidePass(!hidePass)}>
+                        {
+                            hidePass == true
+                            ?
+                            (
+                                <MaterialCommunityIcons name="eye-off" size={20} /> 
+                            )
+                            :
+                            (
+                                <MaterialCommunityIcons name="eye" size={20} /> 
+                            )
+                        }
+                    </TouchableOpacity>
+                )
+                :
+                null
+            }
 
         </View>
     )
