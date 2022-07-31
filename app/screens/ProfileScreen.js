@@ -1,13 +1,13 @@
-import { View, StyleSheet, TouchableOpacity, Dimensions, ScrollView } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 
-import Screen from '../components/Screen';
-import ProfileCard from '../components/ProfileCard';
-
 import colors from '../configs/colors';
 
+import Screen from '../components/Screen';
+
 import AppText from '../components/Text';
+import ProfileCard from '../components/ProfileCard';
 import ScreenHeader from '../components/ScreenHeader';
 import VerificationPopup from '../components/VerificationPopup';
 
@@ -23,7 +23,6 @@ const ProfileScreen = ( props ) => {
                     cardTitle="Personal Info"
                     line1="Abhishek Batliwala"
                     line2="+91 11111 11111"
-                    line3="Address"
                     onIconPress={() => console.log("profile edit icon Pressed")}
                 />
 
@@ -64,9 +63,9 @@ const ProfileScreen = ( props ) => {
 
                 </View>
 
-                <VerificationPopup />
-
             </ScrollView>
+
+            <VerificationPopup />
         </Screen>
     );
 }
