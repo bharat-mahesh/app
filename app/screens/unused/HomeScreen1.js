@@ -2,20 +2,20 @@ import { View, StyleSheet } from 'react-native';
 
 import Swiper from 'react-native-swiper';
 
-import colors from '../configs/colors';
+import colors from '../../configs/colors';
 
-import AppText from '../components/Text';
-import AppButton from '../components/Button';
-import Icon from '../components/Icon';
-import Screen from '../components/Screen';
+import AppText from '../../components/Text';
+import AppButton from '../../components/Button';
+import Icon from '../../components/Icon';
+import Screen from '../../components/Screen';
 
 
-const HomeScreen2 = ( props ) => {
+const HomeScreen1 = ( props ) => {
     return (
         <Screen style={styles.container}>
             <View style={styles.topSection}>
                 <AppText style={styles.header}>
-                    Home Page 2
+                    Home Page 1
                 </AppText>
 
                 <AppText style={styles.catchPhrase}>
@@ -28,13 +28,13 @@ const HomeScreen2 = ( props ) => {
             </View>
 
             <View style={styles.imgSlideShow}>
-                <View style={styles.img}><AppText>Page 2</AppText></View>
+                <View style={styles.img}><AppText>Page 1</AppText></View>
             </View>
 
             <AppButton title="Get Started" />
 
             <View style={styles.bottomSection}>
-                <Icon name="arrow-right" size={40} backgroundColor={colors.primary} onPress={() => console.log("move to next page ig na")} />
+                <Icon name="arrow-right" size={40} backgroundColor={colors.primary} onPress={() => console.log("move to next page ig")} />
 
                 <AppText style={styles.bottomText}> How it Works </AppText>
             </View>
@@ -89,4 +89,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default HomeScreen2;
+export default HomeScreen1;

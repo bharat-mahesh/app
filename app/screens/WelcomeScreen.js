@@ -1,21 +1,20 @@
-import { View, StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
-import Swiper from 'react-native-swiper';
-
-import colors from '../configs/colors';
-
-import AppText from '../components/Text';
 import AppButton from '../components/Button';
+import AppText from '../components/Text';
 import Icon from '../components/Icon';
 import Screen from '../components/Screen';
 
+import colors from '../configs/colors';
 
-const HomeScreen1 = ( props ) => {
+
+const WelcomeScreen = ( { navigation } ) => {
+
     return (
         <Screen style={styles.container}>
             <View style={styles.topSection}>
                 <AppText style={styles.header}>
-                    Home Page 1
+                    Welcome
                 </AppText>
 
                 <AppText style={styles.catchPhrase}>
@@ -23,18 +22,27 @@ const HomeScreen1 = ( props ) => {
                 </AppText>
                 
                 <AppText style={styles.descp}>
-                    Get connected with real farmers and cut down the third party cost!...
+                    Get connected real farmers with manufacturers to cut down third party cost!!!
                 </AppText>
             </View>
 
             <View style={styles.imgSlideShow}>
-                <View style={styles.img}><AppText>Page 1</AppText></View>
+
+                <View style={styles.img}>
+                    <AppText>Page 2</AppText>
+                </View>
+
             </View>
 
-            <AppButton title="Get Started" />
+            <AppButton title="Get Started" onPress={() => navigation.navigate("Login")} />
 
             <View style={styles.bottomSection}>
-                <Icon name="arrow-right" size={40} backgroundColor={colors.primary} onPress={() => console.log("move to next page ig")} />
+                <Icon
+                    backgroundColor={colors.primary}
+                    name="arrow-right"
+                    onPress={() => console.log("How it works clicked")}
+                    size={40}
+                />
 
                 <AppText style={styles.bottomText}> How it Works </AppText>
             </View>
@@ -45,8 +53,8 @@ const HomeScreen1 = ( props ) => {
 const styles = StyleSheet.create({
     container: {
         alignItems: "center",
-        paddingHorizontal: 10,
         justifyContent: "space-evenly",
+        paddingHorizontal: 10,
     },
     
     topSection: {
@@ -67,6 +75,7 @@ const styles = StyleSheet.create({
 
     descp: {
         fontSize: 20,
+        lineHeight: 30,
         textAlign: "center",
     },
 
@@ -79,8 +88,8 @@ const styles = StyleSheet.create({
     img: { },
 
     bottomSection: {
-        flexDirection: "row",
         alignItems: "center",
+        flexDirection: "row",
         paddingBottom: 20,
     },
 
@@ -89,4 +98,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default HomeScreen1;
+export default WelcomeScreen;

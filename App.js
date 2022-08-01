@@ -1,16 +1,14 @@
-import { StyleSheet } from 'react-native';
-import HelpScreen from './app/screens/HelpScreen';
+import { NavigationContainer } from "@react-navigation/native";
 
-import HomeScreen from './app/screens/HomeScreen';
-import LoginScreen from './app/screens/LoginScreen';
-import ProfileScreen from './app/screens/ProfileScreen';
-import SignUpScreen from './app/screens/SignUpScreen';
-import UploadDocScreen from './app/screens/UploadDocScreen';
+import navigationTheme from './app/navigation/navigationTheme';
+
+import AppNavigator from './app/navigation/AppNavigator';
+import AuthNavigator from './app/navigation/AuthNavigator';
 
 export default function App() {
   return (
-    <SignUpScreen />
+    <NavigationContainer theme={navigationTheme} >
+        <AuthNavigator />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({});

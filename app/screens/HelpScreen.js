@@ -1,4 +1,4 @@
-import { View, StyleSheet } from 'react-native';
+import { StyleSheet, View  } from 'react-native';
 
 import AppText from '../components/Text';
 import Screen from '../components/Screen';
@@ -6,9 +6,10 @@ import Screen from '../components/Screen';
 const HelpScreen = ( props ) => {
     return (
         <Screen style={styles.container}>
-            <AppText>This Section in Under Development</AppText>
-            <AppText>Contact Us: 1111 1111</AppText>
-            <AppText>Email Us: teamMerci@somaiya.edu</AppText>
+            <AppText>Nirav ko contact karo</AppText>
+
+            <AppText>Contact Us: +91 89868 30255</AppText>
+            <AppText>Email Us: TeamMerci.SIH@gmail.edu</AppText>
         </Screen>
     );
 }

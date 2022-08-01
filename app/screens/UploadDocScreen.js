@@ -1,6 +1,3 @@
-
-// Maybe Delete it: 31-07-2022, 12:33pm
-
 import { View, StyleSheet } from 'react-native';
 import ProfileCard from '../components/ProfileCard';
 import Screen from '../components/Screen';

@@ -1,5 +1,7 @@
 import { View, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 
+import { useNavigation } from "@react-navigation/native";
+
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 
 import colors from '../configs/colors';
@@ -8,22 +10,25 @@ import Screen from '../components/Screen';
 
 import AppText from '../components/Text';
 import ProfileCard from '../components/ProfileCard';
-import ScreenHeader from '../components/ScreenHeader';
+import Header from '../components/Header';
 import VerificationPopup from '../components/VerificationPopup';
 
 const ProfileScreen = ( props ) => {
+
+    const navigation = useNavigation();
+
     return (
         <Screen style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
 
-                <ScreenHeader title="Profile" onPress={() => console.log("Back Pressed")} />
+                <Header title="Profile" />
 
                 <ProfileCard
                     iconName="account-edit"
                     cardTitle="Personal Info"
                     line1="Abhishek Batliwala"
                     line2="+91 11111 11111"
-                    onIconPress={() => console.log("profile edit icon Pressed")}
+                    onIconPress={() => navigation.navigate("ProfileEdit")}
                 />
 
                 <ProfileCard
@@ -45,18 +50,19 @@ const ProfileScreen = ( props ) => {
                 />
 
                 <View style={styles.bottomSection}>
-                    <TouchableOpacity style={styles.bottomSectionItem} onPress={() => console.log("Wallet pressed")}>
+                    <TouchableOpacity style={styles.bottomSectionItem} onPress={() => navigation.navigate("Wallet")}>
                         <Ionicons name="wallet-outline" size={40} />
                         <AppText style={styles.text}>My Wallet</AppText>
                     </TouchableOpacity>
 
                     
-                    <TouchableOpacity style={styles.bottomSectionItem} onPress={() => console.log("Rating pressed")}>
+                    <TouchableOpacity style={styles.bottomSectionItem}>
                         <MaterialCommunityIcons name="star-outline" size={40} />
                         <AppText style={styles.text}>My Rating</AppText>
+                        <AppText style={styles.rating}> - 4.5</AppText>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.bottomSectionItem} onPress={() => console.log("Help pressed")}>
+                    <TouchableOpacity style={styles.bottomSectionItem} onPress={() => navigation.navigate("Help")}>
                         <MaterialCommunityIcons name="chat-outline" size={40} />
                         <AppText style={styles.text}>Help center</AppText>
                     </TouchableOpacity>
@@ -90,6 +96,11 @@ const styles = StyleSheet.create({
         textDecorationLine: "underline",
         paddingBottom: 5,
         paddingLeft: 15,
+    },
+
+    rating: {
+        fontSize: 25,
+        paddingBottom: 5,
     },
 
     bottomSectionItem: {

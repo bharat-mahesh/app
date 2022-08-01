@@ -1,135 +1,80 @@
 import { useState } from 'react';
 
-import { View, StyleSheet, FlatList, Dimensions } from 'react-native';
+import { View, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import Screen from '../components/Screen';
+import { Ionicons } from "@expo/vector-icons";
+
 import AppText from '../components/Text';
 import SearchBox from '../components/SearchBox';
 import SearchCard from '../components/SearchCard';
-import colors from '../configs/colors';
+import Screen from '../components/Screen';
 
+import colors from '../configs/colors';
+import navigationTheme from '../navigation/navigationTheme';
+
+// Dummy Data
 const fetchedData = [
     {
         id: 1,
-        location: "abc",
-        rating: 4.5,
+        location: "Mumbai",
+        rating: 4.1,
         capacity: 10,   // here it is 10 litres
     },
     {
         id: 2,
-        location: "abcd",
-        rating: 1,
-        capacity: 11,   // here it is 10 litres
+        location: "Mumbai",
+        rating: 4.2,
+        capacity: 20,   // here it is 10 litres
     },
     {
         id: 3,
-        location: "cfff",
-        rating: 2,
-        capacity: 12,   // here it is 10 litres
+        location: "Thane",
+        rating: 4.3,
+        capacity: 30,   // here it is 10 litres
     },
     {
         id: 4,
-        location: "abc",
-        rating: 4.5,
-        capacity: 10,   // here it is 10 litres
+        location: "Thane",
+        rating: 4.4,
+        capacity: 40,   // here it is 10 litres
     },
     {
         id: 5,
-        location: "abcd",
-        rating: 1,
-        capacity: 11,   // here it is 10 litres
+        location: "Pune",
+        rating: 4.5,
+        capacity: 50,   // here it is 10 litres
     },
     {
         id: 6,
-        location: "cfff",
-        rating: 2,
-        capacity: 12,   // here it is 10 litres
+        location: "Pune",
+        rating: 4.6,
+        capacity: 60,   // here it is 10 litres
     },
     {
         id: 7,
-        location: "abc",
-        rating: 4.5,
-        capacity: 10,   // here it is 10 litres
+        location: "Nasik",
+        rating: 4.7,
+        capacity: 70,   // here it is 10 litres
     },
     {
         id: 8,
-        location: "abcd",
-        rating: 1,
-        capacity: 11,   // here it is 10 litres
+        location: "Nasik",
+        rating: 4.8,
+        capacity: 80,   // here it is 10 litres
     },
     {
         id: 9,
-        location: "cfff",
-        rating: 2,
-        capacity: 12,   // here it is 10 litres
+        location: "Nerul",
+        rating: 4.9,
+        capacity: 90,   // here it is 10 litres
     },
     {
         id: 10,
-        location: "abc",
-        rating: 4.5,
+        location: "Nerul",
+        rating: 5.0,
         capacity: 10,   // here it is 10 litres
-    },
-    {
-        id: 11,
-        location: "abcd",
-        rating: 1,
-        capacity: 11,   // here it is 10 litres
-    },
-    {
-        id: 12,
-        location: "cfff",
-        rating: 2,
-        capacity: 12,   // here it is 10 litres
-    },
-    {
-        id: 13,
-        location: "abc",
-        rating: 4.5,
-        capacity: 10,   // here it is 10 litres
-    },
-    {
-        id: 14,
-        location: "abcd",
-        rating: 1,
-        capacity: 11,   // here it is 10 litres
-    },
-    {
-        id: 15,
-        location: "cfff",
-        rating: 2,
-        capacity: 12,   // here it is 10 litres
-    },
-    {
-        id: 16,
-        location: "abc",
-        rating: 4.5,
-        capacity: 10,   // here it is 10 litres
-    },
-    {
-        id: 17,
-        location: "abcd",
-        rating: 1,
-        capacity: 11,   // here it is 10 litres
-    },
-    {
-        id: 18,
-        location: "cfff",
-        rating: 2,
-        capacity: 12,   // here it is 10 litres
-    },
-    {
-        id: 19,
-        location: "abc",
-        rating: 4.5,
-        capacity: 10,   // here it is 10 litres
-    },
-    {
-        id: 20,
-        location: "abcd",
-        rating: 1,
-        capacity: 11,   // here it is 10 litres
     }
 ]
 
@@ -159,27 +104,30 @@ const SearchScreen = ( props ) => {
                 <MaterialCommunityIcons name="map-marker-radius-outline" size={30} />
 
                 <AppText> {"{"} Collection center - Address {"}"} </AppText>
+
+                <TouchableOpacity onPress={() => {
+                    // navigationTheme.navigate("Help")
+                    }}>
+                    <Ionicons style={styles.wallet} name="wallet-outline" size={30} />
+                </TouchableOpacity>
             </View>
 
-            <View style={styles.middleSection}>
+            <View>
                 <SearchBox dummyData={fetchedData} onChangeText={handleSearch} />
-
-                {
-                    dispData === null ?
-                    (<AppText style={styles.error}>Could Not find the item</AppText>) :
-                    (<FlatList
-                        style={styles.list}
-                        data={dispData}
-                        renderItem={({ item }) => <SearchCard item={item} />}
-                        keyExtractor={(item) => item.id}
-                        showsVerticalScrollIndicator={false}
-                    />)
-                }
             </View>
 
-            <View style={styles.middleSection}>
-                {/* <AppText>hi</AppText> */}
-            </View>
+            {
+                dispData === null
+                ?
+                (<AppText style={styles.error}>Could Not find the item</AppText>)
+                :
+                (<FlatList
+                    data={dispData}
+                    renderItem={({ item }) => <SearchCard item={item} />}
+                    keyExtractor={(item) => item.id}
+                    showsVerticalScrollIndicator={false}
+                />)
+            }
         </Screen>
     );
 }
@@ -190,9 +138,10 @@ const styles = StyleSheet.create({
     },
 
     topSection: {
+        alignItems: "center",
         flexDirection: "row",
         padding: 20,
-        alignItems: "center",
+        justifyContent: "space-between"
     },
 
     error: {
@@ -201,10 +150,6 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: colors.danger,
         fontWeight: "600",
-    },
-
-    list: {
-        height: Dimensions.get('window').height * 0.8,
     },
 });
 

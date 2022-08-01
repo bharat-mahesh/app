@@ -10,36 +10,58 @@ import Screen from '../components/Screen';
 
 import colors from '../configs/colors';
 
+// const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+
+const phoneRegExp = /^[1-9]{10}$/
+
 const validationSchema = Yup.object().shape({
+    name: Yup.string().required().label("Name"),
+    phoneNo: Yup.string().required().label("Phone Number").matches(phoneRegExp, 'Phone Number is not Valid'),
     email: Yup.string().required().email().label("Email"),
-    password: Yup.string().required().min(6).label("Password")
+    password: Yup.string().required().min(6).label("Password"),
+    confirmPassword: Yup.string().required().min(6).label("Password Confirmation").oneOf([Yup.ref('password')], 'Passwords do not match')
 })
 
-//Dummy login Credentials
-const LoginCredentials = {
-    email: "sushil.maurya@somaiya.edu",
-    password: "123456"
-}
-
-const LoginScreen = ( { navigation } ) => {
+const RegisterScreen = ( { navigation } ) => {
 
     return (
         <Screen style={styles.container}>
-
-            <Header headerStyles={styles.header} title="Login" />
+            
+            <Header headerStyles={styles.header} title="SignUp" />
 
             <View style={styles.logo}>
                 <Image style={styles.imgLogo} />
             </View>
 
             <Formik
-                initialValues={{ email: "", password: "" }}
+                initialValues={{
+                    name: "",
+                    phoneNo: "",
+                    email: "",
+                    password: "",
+                    confirmPassword: ""
+                }}
                 onSubmit={(values) => console.log(values)}
                 validationSchema={validationSchema}
             >
                 {() => (
+                    <ScrollView showsVerticalScrollIndicator={false} >
 
-                    <ScrollView showsVerticalScrollIndicator={false}>
+                        <AppFormField
+                            autoCapitalize="words"
+                            autoCorrect={false}
+                            icon="account"
+                            name="name"
+                            placeholder="Name"
+                        />
+
+                        <AppFormField
+                            icon="phone"
+                            keyboardType="phone-pad"
+                            maxLength={10}
+                            name="phoneNo"
+                            placeholder="Phone Number"
+                        />
 
                         <AppFormField
                             autoCapitalize="none"
@@ -61,16 +83,25 @@ const LoginScreen = ( { navigation } ) => {
                             textContentType="password"
                         />
 
-                        <SubmitButton title="Login" />
+                        <AppFormField
+                            autoCapitalize="none"
+                            autoCorrect={false}
+                            icon="lock"
+                            name="confirmPassword"
+                            placeholder="Confirm Password"
+                            secureTextEntry={true}
+                            textContentType="password"
+                        />
 
+                        <SubmitButton title="SignUp" />
+                        
                         <AppButton
                             color={colors.light}
                             fontWeight="400"
-                            onPress={() => navigation.navigate("Register")}
+                            onPress={() => navigation.navigate("Login")}
                             textColor="primary"
-                            title="Don't have an account yet? Signup"
+                            title="Already have an account? Login"
                         />
-
                     </ScrollView>
                 )}
             </Formik>
@@ -106,4 +137,4 @@ const styles = StyleSheet.create({
     // }
 })
 
-export default LoginScreen;
+export default RegisterScreen;
