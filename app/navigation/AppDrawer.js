@@ -9,12 +9,10 @@ const Drawer = createDrawerNavigator();
 const AppDrawer = () => {
 
     return (
-        <NavigationContainer>
-            <Drawer.Navigator initialRouteName="Home" screenOptions={{ headerShown: true }}>
-                <Drawer.Screen name="Home" component={SearchScreen} />
-                <Drawer.Screen name="Profile" component={ProfileScreen} />
-            </Drawer.Navigator>
-        </NavigationContainer>
+        <Drawer.Navigator initialRouteName="Home" screenOptions={{ headerShown: true }}>
+            <Drawer.Screen name="Home" component={SearchScreen} />
+            <Drawer.Screen name="Profile" component={ProfileScreen} />
+        </Drawer.Navigator>
     );
 };
 
