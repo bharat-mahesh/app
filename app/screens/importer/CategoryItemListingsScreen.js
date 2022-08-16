@@ -2,7 +2,7 @@ import { FlatList, StyleSheet } from 'react-native';
 
 import AppText from '../../components/ui/Text';
 import ExcludeStatusBar from '../../components/ui/ExcludeStatusBar';
-import ImporterListItem from '../../components/ImporterListItem';
+import CategoryListItem from '../../components/CategoryListItem';
 import ListItemSeparator from '../../components/ui/ListItemSeparator';
 import Screen from '../../components/Screen';
 
@@ -45,7 +45,7 @@ const CategoryItemListingsScreen = ( { route } ) => {
                 ItemSeparatorComponent={ListItemSeparator}
                 keyExtractor={(item) => item.id.toString()}
                 renderItem={({ item }) => (
-                    <ImporterListItem item={item} />
+                    <CategoryListItem item={item} />
                 )}
                 showsVerticalScrollIndicator={false}
             />

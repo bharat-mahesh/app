@@ -3,7 +3,7 @@ import { Image, ScrollView, StyleSheet, View } from 'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import { AppFormField, SubmitButton } from '../../components/forms';
+import { FormField, SubmitButton } from '../../components/forms';
 import AppButton from '../../components/ui/Button';
 import Header from '../../components/ui/Header';
 import Screen from '../../components/Screen';
@@ -45,7 +45,7 @@ const LoginScreen = ( { navigation } ) => {
                     >
                         {() => (
                             <>
-                                <AppFormField
+                                <FormField
                                     autoCapitalize="none"
                                     autoCorrect={false}
                                     icon="email"
@@ -55,7 +55,7 @@ const LoginScreen = ( { navigation } ) => {
                                     textContentType="emailAddress"
                                 />
 
-                                <AppFormField
+                                <FormField
                                     autoCapitalize="none"
                                     autoCorrect={false}
                                     icon="lock"

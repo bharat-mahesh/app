@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 import AppButton from '../../components/ui/Button';
 import AppText from '../../components/ui/Text';
 import Header from '../../components/ui/Header';
-import CartItem from '../../components/importer/CartItem';
+import CartItem from '../../components/CartItem';
 import ListItemSeparator from '../../components/ui/ListItemSeparator';
 import Screen from '../../components/Screen';
 import SectionSeparator from '../../components/ui/SectionSeparator';

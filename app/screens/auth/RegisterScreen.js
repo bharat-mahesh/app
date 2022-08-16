@@ -3,7 +3,7 @@ import { Image, ScrollView, StyleSheet, View } from 'react-native';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import { AppFormField, SubmitButton } from '../../components/forms';
+import { FormField, SubmitButton } from '../../components/forms';
 import AppButton from '../../components/ui/Button';
 import Header from '../../components/ui/Header';
 import Screen from '../../components/Screen';
@@ -48,7 +48,7 @@ const RegisterScreen = ( { navigation } ) => {
                     >
                         {() => (
                             <>
-                                <AppFormField
+                                <FormField
                                     autoCapitalize="words"
                                     autoCorrect={false}
                                     icon="account"
@@ -56,7 +56,7 @@ const RegisterScreen = ( { navigation } ) => {
                                     placeholder="Name"
                                 />
 
-                                <AppFormField
+                                <FormField
                                     icon="phone"
                                     keyboardType="phone-pad"
                                     maxLength={10}
@@ -64,7 +64,7 @@ const RegisterScreen = ( { navigation } ) => {
                                     placeholder="Phone Number"
                                 />
 
-                                <AppFormField
+                                <FormField
                                     autoCapitalize="none"
                                     autoCorrect={false}
                                     icon="email"
@@ -74,7 +74,7 @@ const RegisterScreen = ( { navigation } ) => {
                                     textContentType="emailAddress"
                                 />
 
-                                <AppFormField
+                                <FormField
                                     autoCapitalize="none"
                                     autoCorrect={false}
                                     icon="lock"
@@ -84,7 +84,7 @@ const RegisterScreen = ( { navigation } ) => {
                                     textContentType="password"
                                 />
 
-                                <AppFormField
+                                <FormField
                                     autoCapitalize="none"
                                     autoCorrect={false}
                                     icon="lock"

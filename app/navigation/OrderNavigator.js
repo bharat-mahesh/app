@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import OrderDetailsScreen from "../screens/OrderDetailsScreen";
-import OrderHelpScreen from "../screens/OrderHelpScreen";
+import OrderDetailsScreen from "../screens/importer/OrderDetailsScreen";
+import OrderHelpScreen from "../screens/importer/OrderHelpScreen";
 import OrderScreen from "../screens/importer/OrderScreen";
 
 import routes from "./routes";
