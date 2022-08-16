@@ -5,7 +5,7 @@ import ModalProps from "react-native-modalbox";
 
 import { Feather, MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from '../configs/colors';
-import AppText from './Text';
+import AppText from './ui/Text';
 
 const VerificationPopup = ( props ) => {
     const [isPressed, setIsPressed] = useState(false);

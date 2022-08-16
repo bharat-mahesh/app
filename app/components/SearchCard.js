@@ -1,6 +1,6 @@
 import { View, StyleSheet, Image } from 'react-native';
 import colors from '../configs/colors';
-import AppText from './Text';
+import AppText from './ui/Text';
 
 const SearchCard = ( { item } ) => {
     return (
@@ -20,6 +20,7 @@ const SearchCard = ( { item } ) => {
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: colors.light,
         borderWidth: 1,
         borderColor: colors.medium,
         borderRadius: 10,

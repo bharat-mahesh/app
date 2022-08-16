@@ -2,13 +2,15 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 
+import CartNavigator from "./CartNavigator";
+import HomeNavigator from "./HomeNavigator";
+import OrderNavigator from "./OrderNavigator";
 import ProfileNavigator from "./ProfileNavigator";
 
-import MapScreen from "../screens/MapScreen";
-import ProfileScreen from "../screens/ProfileScreen";
-import SearchScreen from "../screens/SearchScreen";
-
 import colors from "../configs/colors";
+
+import routes from "./routes";
+
 
 const Tab = createBottomTabNavigator();
 
@@ -17,35 +19,40 @@ const AppNavigator = () => {
     return(
         <Tab.Navigator
             screenOptions={{
-                tabBarActiveBackgroundColor: colors.primary,
-                tabBarActiveTintColor: colors.white,
-                tabBarInactiveBackgroundColor: colors.light,
                 tabBarInactiveTintColor: colors.black,
                 tabBarLabelStyle: {
                     fontSize: 14,
                 },
                 headerShown: false,
             }}
+            initialRouteName={ routes.HOME }
         >
             <Tab.Screen
-                name="Home"
-                component={SearchScreen}
+                name={ routes.HOME }
+                component={HomeNavigator}
                 options={{
                     tabBarIcon: ( { size, color } ) => <Ionicons name="search" size={size} color={color} />
                 }}
             />
             <Tab.Screen
-                name="Map"
-                component={MapScreen}
+                name={ routes.CART }
+                component={CartNavigator}
                 options={{
-                    tabBarIcon: ( { size, color } ) => <MaterialCommunityIcons name="map-marker-radius-outline" size={size} color={color} />
+                    tabBarIcon: ( { size, color } ) => <MaterialCommunityIcons name="cart-outline" size={size} color={color} />
                 }}
             />
             <Tab.Screen
-                name="Accounts"
+                name={ routes.ORDERS }
+                component={OrderNavigator}
+                options={{
+                    tabBarIcon: ( { size, color } ) => <MaterialCommunityIcons name="dropbox" size={size} color={color} />
+                }}
+            />
+            <Tab.Screen
+                name={ routes.ACCOUNT }
                 component={ProfileNavigator}
                 options={{
-                    tabBarIcon: ( { size, color } ) => <MaterialCommunityIcons name="account" size={size} color={color} />
+                    tabBarIcon: ( { size, color } ) => <MaterialCommunityIcons name="account-outline" size={size} color={color} />
                 }}
             />
         </Tab.Navigator>

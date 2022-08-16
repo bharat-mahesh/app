@@ -1,4 +1,5 @@
-import { StyleSheet, View, Platform, StatusBar } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+
 
 const Screen = ( { children, style } ) => {
     return (
@@ -11,7 +12,6 @@ const Screen = ( { children, style } ) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
     },
 });
 

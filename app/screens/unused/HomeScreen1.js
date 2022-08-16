@@ -4,9 +4,9 @@ import Swiper from 'react-native-swiper';
 
 import colors from '../../configs/colors';
 
-import AppText from '../../components/Text';
-import AppButton from '../../components/Button';
-import Icon from '../../components/Icon';
+import AppText from '../../components/ui/Text';
+import AppButton from '../../components/ui/Button';
+import Icon from '../../components/ui/Icon';
 import Screen from '../../components/Screen';
 
 

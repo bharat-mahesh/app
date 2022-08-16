@@ -21,10 +21,13 @@ const styles = StyleSheet.create({
         padding: 10,
         borderWidth: 1,
         borderRadius: 10,
-        borderColor: colors.medium,
+        borderColor: colors.light,
+        backgroundColor: colors.light,
     },
 
     textInp: {
+        width: "85%",
+        paddingLeft: 10,
         fontSize: 20,
     },
 });

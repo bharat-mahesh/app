@@ -3,7 +3,7 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import colors from '../configs/colors';
-import AppText from './Text';
+import AppText from './ui/Text';
 
 const ProfileCard = ( { iconName, cardTitle, cardData, line1, line2, line3, onIconPress } ) => {
     return (

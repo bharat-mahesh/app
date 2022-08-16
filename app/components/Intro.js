@@ -2,8 +2,8 @@ import { View, StyleSheet, Image, Dimensions } from 'react-native';
 
 import colors from '../configs/colors';
 
-import AppButton from './Button';
-import AppText from './Text';
+import AppButton from './ui/Button';
+import AppText from './ui/Text';
 import Screen from './Screen';
 
 const IntroItem = ({
