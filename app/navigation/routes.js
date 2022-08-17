@@ -23,8 +23,10 @@ export default Object.freeze({
     // OrderNavigator
     ORDERS_LISTING: "OrdersListing",
     ORDER_DETAILS: "OrderDetails",
-    ORDER_HELP: "OrderHelp"
+    ORDER_HELP: "OrderHelp",
 
     // ProfileNavigator -- Requires Modification in it's code
-
+    PROFILE: "Profile",
+    FAQ_S: "FAQs",
+    
 });

@@ -1,8 +1,11 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import HelpScreen from "../unusedFiles/unusedScreens/HelpScreen";
+import FAQsScreen from "../screens/importer/FAQsScreen";
 import ProfileEditScreen from "../unusedFiles/unusedScreens/ProfileEditScreen";
 import ProfileScreen from "../screens/importer/ProfileScreen";
+
+import routes from "./routes";
+
 
 const Stack = createNativeStackNavigator();
 
@@ -13,16 +16,17 @@ const ProfileNavigator = () => {
             screenOptions={{
                 headerShown: false,
             }}
+            initialRouteName={ routes.PROFILE }
         >
-            <Stack.Screen name="Profile" component={ProfileScreen} />
+            <Stack.Screen name={ routes.PROFILE } component={ProfileScreen} />
 
             <Stack.Screen name="ProfileEdit" component={ProfileEditScreen} />
 
-            <Stack.Screen name="Wallet" component={HelpScreen} />
+            <Stack.Screen name={ routes.FAQ_S } component={FAQsScreen} />
 
-            <Stack.Screen name="Rating" component={HelpScreen} />
+            <Stack.Screen name="Rating" component={FAQsScreen} />
 
-            <Stack.Screen name="Help" component={HelpScreen} />
+            <Stack.Screen name="Help" component={FAQsScreen} />
         </Stack.Navigator>
     )
 }

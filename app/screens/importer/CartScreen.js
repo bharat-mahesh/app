@@ -138,20 +138,20 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: colors.light_darker,
         flexDirection: "row",
-        justifyContent: "center",
-        paddingHorizontal: 10,
+        paddingHorizontal: 15,
         paddingVertical: 7,
     },
 
     location: {
         fontFamily: "Nunito_Regular",
-        fontSize: 16,
-        paddingLeft: 6,
+        fontSize: 12,
+        paddingLeft: 4,
+        textDecorationLine: 'underline',
     },
 
     zipcode: {
         fontFamily: "Nunito_Bold",
-        fontSize: 14,
+        fontSize: 12,
     },
 
     // Cart's Total Payment Value

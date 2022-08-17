@@ -3,7 +3,7 @@
 
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from '@react-navigation/native';
-import HelpScreen from "../unusedScreens/HelpScreen";
+import FAQsScreen from "../../screens/importer/FAQsScreen";
 import MapScreen from "../unusedScreens/MapScreen";
 
 import ProfileScreen from "../../screens/importer/ProfileScreen";
@@ -18,7 +18,7 @@ const AppDrawer = () => {
             <Drawer.Screen name="Home" component={SearchScreen} />
             <Drawer.Screen name="Profile" component={ProfileScreen} />
             <Drawer.Screen name="Map" component={MapScreen} />
-            <Drawer.Screen name="Edit Personal Info" component={HelpScreen} />
+            <Drawer.Screen name="Edit Personal Info" component={FAQsScreen} />
         </Drawer.Navigator>
     );
 };

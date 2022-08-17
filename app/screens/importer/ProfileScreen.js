@@ -1,6 +1,6 @@
 import { Image, ImageBackground, ScrollView, StyleSheet, TouchableOpacity, View } from 'react-native';
 
-import { EvilIcons, MaterialCommunityIcons } from "@expo/vector-icons";
+import { Entypo, EvilIcons, MaterialCommunityIcons } from "@expo/vector-icons";
 
 import AppText from '../../components/ui/Text';
 import ListItemSeparator from '../../components/ui/ListItemSeparator';
@@ -10,12 +10,14 @@ import Screen from '../../components/Screen';
 
 import colors from '../../configs/colors';
 
+import routes from '../../navigation/routes';
+
 import { user } from '../../mock/userData';
 
 
 const authenticated = true; // fetch from database and show some tickmark for them and Crossmark otherwise
 
-const ProfileScreen = ( props ) => {
+const ProfileScreen = ( { navigation } ) => {
 
     return (
         <Screen style={styles.container}>
@@ -29,14 +31,30 @@ const ProfileScreen = ( props ) => {
                         style={styles.editButtonContainer}
                     >
                         <ImageBackground
-                            source={require("../../assets/ProfileBackground.png")}
+                            source={
+                                authenticated
+                                ?
+                                require("../../assets/verified_tick_background.png")
+                                :
+                                require("../../assets/not_verified_tick_background.png")
+                            }
                             style={styles.editButton}
                         >
-                            <MaterialCommunityIcons
-                                color={colors.white}
-                                name="pencil"
-                                size={25}
-                            />
+                            {
+                                authenticated
+                                ?
+                                <MaterialCommunityIcons
+                                    color={colors.white}
+                                    name="check"
+                                    size={25}
+                                />
+                                :
+                                <Entypo
+                                    color={colors.white}
+                                    name="cross"
+                                    size={25}
+                                />
+                            }
                         </ImageBackground>
                     </TouchableOpacity>
 
@@ -97,16 +115,9 @@ const ProfileScreen = ( props ) => {
                     <ListItemSeparator width="100%" marginVertical={5} />
 
                     <ProfileOptionItem
-                        icon="help"
-                        onPress={() => console.log("Navigate to Help Center")}
+                        icon="target"
+                        onPress={() => navigation.navigate( routes.FAQ_S ) }
                         text="Help Center"
-                    />
-                    <ListItemSeparator width="100%" marginVertical={5} />
-
-                    <ProfileOptionItem
-                        icon="email"
-                        onPress={() => console.log("Open Contact Us page")}
-                        text="Contact Us"
                     />
                     <ListItemSeparator width="100%" marginVertical={5} />
 
