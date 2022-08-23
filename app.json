@@ -1,10 +1,11 @@
 {
   "expo": {
     "name": "dairyApp_29thJuly",
-    "slug": "dairyApp_29thJuly",
+    "slug": "dairyapp",
+    "owner": "s_maurya00",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./app/assets/icon.png",
+    "icon": "./app/assets/logo_app_13-08-2022.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./app/assets/splash.png",

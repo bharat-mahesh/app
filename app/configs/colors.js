@@ -11,6 +11,7 @@ export default {
     dark: '#0c0c0c',
     danger: '#ff5252',
     active: '#57C840',
+    active_text: '#57f840',
     hyperlink: 'dodgerblue',
 
     // added from youtube color palate

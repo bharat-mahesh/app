@@ -27,7 +27,7 @@ const OrderCard = ( { orderData } ) => {
                         (
                             orderData.order_status === 1
                             ?
-                            (<AppText style={styles.orderStatusDelivered}>Delivered, {orderData.date_delivered}</AppText>)
+                            (<AppText style={styles.orderStatusDelivered}>Delivered, {orderData.track_order[0].date_delivered}</AppText>)
                             :
                             (<AppText style={styles.orderStatusCancelled}>Cancelled</AppText>)
                         )
@@ -57,7 +57,7 @@ const OrderCard = ( { orderData } ) => {
 
             <View style={styles.btnContainer}>
                 <AppButton
-                    onPress={() => navigation.navigate( routes.ORDER_DETAILS )}
+                    onPress={() => navigation.navigate( routes.ORDER_DETAILS,  { orderData } )}
                     style={styles.btnLeft}
                     textStyles={styles.btnLeftText}
                     title="View Details"

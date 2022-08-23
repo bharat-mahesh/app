@@ -2,10 +2,8 @@
 
 export const orderData = [
     {
-        id: 1,
+        order_number: 1,
         order_status: 2,
-        date_ordered: "08 October 2021",
-        date_delivered: null,
         products: [
             {
                 orderId: 102,
@@ -23,12 +21,17 @@ export const orderData = [
         tot_ordered_items: 1,
         tot_amnt: '11,078.00',
         farm_name: 'Abc',
+        track_order: [
+            {
+                date_ordered: "08 October 2021",
+                shipped: false,
+                date_delivered: null,
+            }
+        ]
     },
     {
-        id: 2,
+        order_number: 2,
         order_status: 1,
-        date_ordered: "01 May 2022",
-        date_delivered: "20 May 2022",
         products: [
             {
                 orderId: 224,
@@ -40,12 +43,17 @@ export const orderData = [
         tot_ordered_items: 25,
         tot_amnt: '10,000.00',
         farm_name: 'Def',
+        track_order: [
+            {
+                date_ordered: "01 May 2022",
+                shipped: true,
+                date_delivered: "20 May 2022",
+            }
+        ]
     },
     {
-        id: 3,
+        order_number: 3,
         order_status: 0,
-        date_ordered: "11 August 2022",
-        date_delivered: null,
         products: [
             {
                 orderId: 4323,
@@ -57,12 +65,17 @@ export const orderData = [
         tot_ordered_items: 15,
         tot_amnt: '50,000.00',
         farm_name: 'Hij',
+        track_order: [
+            {
+                date_ordered: "11 August 2022",
+                shipped: true,
+                date_delivered: null,
+            }
+        ]
     },
     {
-        id: 4,
+        order_number: 4,
         order_status: 0,
-        date_ordered: "15 August 2022",
-        date_delivered: null,
         products: [
             {
                 orderId: 943,
@@ -74,5 +87,12 @@ export const orderData = [
         tot_ordered_items: 15,
         tot_amnt: '50,000.00',
         farm_name: 'Klm',
+        track_order: [
+            {
+                date_ordered: "15 August 2022",
+                shipped: false,
+                date_delivered: null,
+            }
+        ]
     },
 ]

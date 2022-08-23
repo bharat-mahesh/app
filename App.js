@@ -5,6 +5,7 @@ import navigationTheme from "./app/navigation/navigationTheme";
 import AppNavigator from './app/navigation/AppNavigator';
 import AuthNavigator from './app/navigation/AuthNavigator';
 
+
 export default function App() {
   return (
     <NavigationContainer

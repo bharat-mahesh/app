@@ -20,13 +20,7 @@ const ProfileNavigator = () => {
         >
             <Stack.Screen name={ routes.PROFILE } component={ProfileScreen} />
 
-            <Stack.Screen name="ProfileEdit" component={ProfileEditScreen} />
-
             <Stack.Screen name={ routes.FAQ_S } component={FAQsScreen} />
-
-            <Stack.Screen name="Rating" component={FAQsScreen} />
-
-            <Stack.Screen name="Help" component={FAQsScreen} />
         </Stack.Navigator>
     )
 }

@@ -24,7 +24,7 @@ const OrderScreen = ( props ) => {
                 {
                     orderData.map((item) => {
                         return (
-                            <View key={item.id}>
+                            <View key={item.order_number}>
                                 <OrderCard orderData={item} />
 
                                 <SectionSeparator height={15} />

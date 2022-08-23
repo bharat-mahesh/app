@@ -15,8 +15,6 @@ import routes from '../../navigation/routes';
 import { user } from '../../mock/userData';
 
 
-const authenticated = true; // fetch from database and show some tickmark for them and Crossmark otherwise
-
 const ProfileScreen = ( { navigation } ) => {
 
     return (
@@ -32,7 +30,7 @@ const ProfileScreen = ( { navigation } ) => {
                     >
                         <ImageBackground
                             source={
-                                authenticated
+                                user.authenticated
                                 ?
                                 require("../../assets/verified_tick_background.png")
                                 :
@@ -41,7 +39,7 @@ const ProfileScreen = ( { navigation } ) => {
                             style={styles.editButton}
                         >
                             {
-                                authenticated
+                                user.authenticated
                                 ?
                                 <MaterialCommunityIcons
                                     color={colors.white}

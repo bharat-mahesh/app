@@ -9,6 +9,9 @@ import Screen from '../../components/Screen';
 import colors from '../../configs/colors';
 
 import { milk } from '../../mock/categoryListData';
+// import useApi from '../../hooks/useApi';
+// import { useEffect } from 'react';
+// import listingsApi from '../../api/listingsApi';
 
 // garbage
 //     itemType == "milk" ? milk :
@@ -29,8 +32,13 @@ import { milk } from '../../mock/categoryListData';
 
 const CategoryItemListingsScreen = ( { route } ) => {
 
-    const fetchedData = milk // change 'fetchedData' to api call when backend is connected
-    // = apiCall and fetch data of cardSelected;
+    const fetchListings = milk;
+
+    // const fetchCat = useApi(listingsApi.getListings);
+
+    // useEffect(() => {
+    //     fetchCat.request();
+    // }, []);
 
     return (
         <Screen>
@@ -41,7 +49,7 @@ const CategoryItemListingsScreen = ( { route } ) => {
             </AppText>
 
             <FlatList
-                data={fetchedData}
+                data={fetchListings}
                 ItemSeparatorComponent={ListItemSeparator}
                 keyExtractor={(item) => item.id.toString()}
                 renderItem={({ item }) => (

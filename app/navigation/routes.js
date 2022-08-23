@@ -27,6 +27,15 @@ export default Object.freeze({
 
     // ProfileNavigator -- Requires Modification in it's code
     PROFILE: "Profile",
+    ACCOUNT_INFO: "AccountInfo",
+    ACCOUNT_VERIFICATION: "AccountVerif",
+    PAYMENT_METHOD: "PaymentMeth",
+    DELIVERY_ADDRESS: "DeliveryAddr",
+
+    SETTINGS: "Settings",
     FAQ_S: "FAQs",
-    
+    // SHARE_APP: "ShareApp",
+    // RATE_APP: "RateApp",
+
+    // LOGOUT: "Logout"
 });
