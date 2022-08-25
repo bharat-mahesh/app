@@ -1,0 +1,107 @@
+type Milk @model{
+id:ID!
+image:String!
+farmName: String!
+itemName: String!
+price: Int!
+minNoOfItemPurchase:Int!
+availableQuantity:Int!
+rating: Int
+}
+
+type categories @model{
+  id:ID!
+  cardName:String!
+  title:String!
+  image:String!
+}
+
+type faqsData @model{
+  sectionHeader:String!
+  QAs:[
+    id:ID!
+    answer:String!
+    question:String!
+  ]
+}
+
+type user @model{
+  userName:String!
+  email:String!
+  authenticated:Boolean!
+  deliveryLocation:String!  
+  country:String!
+  city:String!
+  zipcode:Boolean!
+  totalNoOfItems:Int!
+  totalNoOfOrdersMade:Int!
+}
+
+type cart @model{
+  id:ID!
+  image:String!
+  farmName:String!
+  itemname:String!  
+  minNoOfItemPurchase:Int!
+  price:Int!
+  orderCount:Int!
+  totalPice:Int!
+}
+
+type payDetails @model{
+  mrp_total:Float!
+  prod_discount:Float!
+  tot_amount:Float!
+}
+
+type orderData @model{
+  order_number:Int!
+  order_status:Int!
+  products: [
+    {
+      orderId:ID!
+      image:String!
+      item_name:String!
+      order_count:Int!
+    }
+    {
+      orderId:ID!
+      image:String!
+      item_name:String!
+      order_count:Int!
+    }
+  ]
+  tot_ordered_items:Int!
+  tot_amnt:Float!
+  farm_name:String!
+  track_order: [
+   {
+      date_ordered:String!
+      shipped:Boolean!
+      date_delivered:NULL!
+   }
+  ]
+}
+
+# # This "input" configures a global authorization rule to enable public access to
+# # all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+# input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+# type Blog @model {
+#   id: ID!
+#   name: String!
+#   posts: [Post] @hasMany
+# }
+
+# type Post @model {
+#   id: ID!
+#   title: String!
+#   blog: Blog @belongsTo
+#   comments: [Comment] @hasMany
+# }
+
+# type Comment @model {
+#   id: ID!
+#   post: Post @belongsTo
+#   content: String!
+# }

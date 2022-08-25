@@ -13,6 +13,7 @@ import colors from '../../configs/colors';
 import routes from '../../navigation/routes';
 
 import { user } from '../../mock/userData';
+import { Auth } from 'aws-amplify';
 
 
 const ProfileScreen = ( { navigation } ) => {
@@ -136,7 +137,7 @@ const ProfileScreen = ( { navigation } ) => {
                 <ProfileOptionsContainer style={styles.profOptCont}>
                     <ProfileOptionItem
                         icon="power"
-                        onPress={() => console.log("Logout the user")}
+                        onPress={()=>{Auth.signOut()}}
                         showArrow={false}
                         text="Logout"
                     />
