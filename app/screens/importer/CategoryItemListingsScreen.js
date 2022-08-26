@@ -1,5 +1,5 @@
 import { FlatList, StyleSheet } from 'react-native';
-import {DataStore}   from 'aws-amplify';
+import {API, DataStore, graphqlOperation}   from 'aws-amplify';
 
 import AppText from '../../components/ui/Text';
 import ExcludeStatusBar from '../../components/ui/ExcludeStatusBar';
@@ -10,6 +10,8 @@ import { payDetails } from '../../../src/models';
 
 import colors from '../../configs/colors';
 import { useEffect, useState } from 'react';
+import { listMilks } from '../../../src/graphql/queries';
+import routes from '../../navigation/routes';
 
 // import { milk } from '../../mock/categoryListData';
 // import useApi from '../../hooks/useApi';
@@ -34,16 +36,60 @@ import { useEffect, useState } from 'react';
 
 
 const CategoryItemListingsScreen = ( { route } ) => {
-    const{listings, setListing}=useState<payDetails>([])
-
     
-
+    const[data,setData]=useState([])
+    
+    const itemType =
+    route.params.cardSelected === "Milk"
+    ?
+    (
+        listMilks
+    ) : (
+        route.params.cardSelected === "Butter"
+        ?
+        (
+            listButters
+        ) : (
+            route.params.cardSelected === "Milk Powder"
+            ?
+            (
+                listMilkPowders
+            ) : (
+                route.params.cardSelected === "Paneer"
+                ?
+                (
+                    listPaneers
+                ) : (
+                    route.params.cardSelected === "Cheese"
+                    ?
+                    ( listCheese ) : ( listButterMilks )
+                )
+            )
+        )
+    )
+                    console.log(itemType);
     useEffect(()=>{
-       DataStore.query(payDetails).then(setListing)
+        getdata();
+    }
+        
+        ,[]
+    )
+    const getdata = async()=>{
+        try {
+            const mdata = await API.graphql(graphqlOperation(itemType))
+            console.log(mdata);
+            const list=mdata.data.itemType.items
+            console.log(list);
+            setData(list)
+        } catch (error) {
+            console.log(error);
         }
-    ,[]);
 
-    const fetchListings = listings;
+    }
+    console.log(data);
+
+   
+    const fetchListings = data;
 
     // const fetchCat = useApi(listingsApi.getListings);
 

@@ -25,7 +25,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.s_maurya00.dairyapp"
     },
     "web": {
       "favicon": "./app/assets/favicon.png"
