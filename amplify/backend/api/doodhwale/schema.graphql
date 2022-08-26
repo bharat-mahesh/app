@@ -1,4 +1,4 @@
-type Milk @model{
+type Milk @model @auth(rules: [{ allow: public }]){
 id:ID!
 image:String!
 farmName: String!
@@ -9,23 +9,19 @@ availableQuantity:Int!
 rating: Int
 }
 
-type categories @model{
+type categories @model @auth(rules: [{ allow: public }]){
   id:ID!
   cardName:String!
   title:String!
   image:String!
 }
 
-type faqsData @model{
+type faqsData @model @auth(rules: [{ allow: public }]){
   sectionHeader:String!
-  QAs:[
-    id:ID!
-    answer:String!
-    question:String!
-  ]
+ 
 }
 
-type user @model{
+type user @model @auth(rules: [{ allow: public }]){
   userName:String!
   email:String!
   authenticated:Boolean!
@@ -37,7 +33,7 @@ type user @model{
   totalNoOfOrdersMade:Int!
 }
 
-type cart @model{
+type cart @model @auth(rules: [{ allow: public }]){
   id:ID!
   image:String!
   farmName:String!
@@ -48,39 +44,20 @@ type cart @model{
   totalPice:Int!
 }
 
-type payDetails @model{
+type payDetails @model @auth(rules: [{ allow: public }]){
   mrp_total:Float!
   prod_discount:Float!
   tot_amount:Float!
 }
 
-type orderData @model{
+type orderData @model @auth(rules: [{ allow: public }]){
   order_number:Int!
   order_status:Int!
-  products: [
-    {
-      orderId:ID!
-      image:String!
-      item_name:String!
-      order_count:Int!
-    }
-    {
-      orderId:ID!
-      image:String!
-      item_name:String!
-      order_count:Int!
-    }
-  ]
+ 
   tot_ordered_items:Int!
   tot_amnt:Float!
   farm_name:String!
-  track_order: [
-   {
-      date_ordered:String!
-      shipped:Boolean!
-      date_delivered:NULL!
-   }
-  ]
+  
 }
 
 # # This "input" configures a global authorization rule to enable public access to
