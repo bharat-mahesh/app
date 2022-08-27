@@ -10,7 +10,7 @@ import { payDetails } from '../../../src/models';
 
 import colors from '../../configs/colors';
 import { useEffect, useState } from 'react';
-import { listMilks } from '../../../src/graphql/queries';
+import { listMilks,listButter,listMilkPowders,listPaneers,listCheeses, listButterMilks } from '../../../src/graphql/queries';
 import routes from '../../navigation/routes';
 
 // import { milk } from '../../mock/categoryListData';
@@ -38,7 +38,7 @@ import routes from '../../navigation/routes';
 const CategoryItemListingsScreen = ( { route } ) => {
     
     const[data,setData]=useState([])
-    
+    var middle
     const itemType =
     route.params.cardSelected === "Milk"
     ?
@@ -48,7 +48,7 @@ const CategoryItemListingsScreen = ( { route } ) => {
         route.params.cardSelected === "Butter"
         ?
         (
-            listButters
+            listButter
         ) : (
             route.params.cardSelected === "Milk Powder"
             ?
@@ -62,7 +62,7 @@ const CategoryItemListingsScreen = ( { route } ) => {
                 ) : (
                     route.params.cardSelected === "Cheese"
                     ?
-                    ( listCheese ) : ( listButterMilks )
+                    ( listCheeses ) : ( listButterMilks )
                 )
             )
         )
@@ -70,16 +70,45 @@ const CategoryItemListingsScreen = ( { route } ) => {
                     console.log(itemType);
     useEffect(()=>{
         getdata();
-    }
-        
-        ,[]
-    )
+    } ,[])
     const getdata = async()=>{
         try {
-            const mdata = await API.graphql(graphqlOperation(itemType))
-            console.log(mdata);
-            const list=mdata.data.itemType.items
-            console.log(list);
+            // const mdata = await API.graphql(graphqlOperation(itemType))
+            // console.log(mdata);
+
+            const mdata = 
+            route.params.cardSelected === "Milk"
+            ?
+            (
+                await API.graphql(graphqlOperation(listMilks))
+            ) : (
+                route.params.cardSelected === "Butter"
+                ?
+                (
+                    await API.graphql(graphqlOperation(listButter))
+                ) : (
+                    route.params.cardSelected === "Milk Powder"
+                    ?
+                    (
+                        await API.graphql(graphqlOperation(listMilkPowders))
+                    ) : (
+                        route.params.cardSelected === "Paneer"
+                        ?
+                        (
+                            await API.graphql(graphqlOperation(listPaneers))
+                        ) : (
+                            route.params.cardSelected === "Cheese"
+                            ?
+                            (
+                                await API.graphql(graphqlOperation(listCheeses))
+                            ) : (
+                                await API.graphql(graphqlOperation(listButterMilks))
+                            )
+                        )
+                    )
+                )
+            )
+            const list=mdata.data.listMilks.items
             setData(list)
         } catch (error) {
             console.log(error);
@@ -87,7 +116,6 @@ const CategoryItemListingsScreen = ( { route } ) => {
 
     }
     console.log(data);
-
    
     const fetchListings = data;
 

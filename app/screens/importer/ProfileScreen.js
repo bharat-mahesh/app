@@ -1,5 +1,5 @@
 import { Image, ImageBackground, ScrollView, StyleSheet, TouchableOpacity, View } from 'react-native';
-
+import React from 'react';
 import { Entypo, EvilIcons, MaterialCommunityIcons } from "@expo/vector-icons";
 
 import AppText from '../../components/ui/Text';
@@ -13,11 +13,35 @@ import colors from '../../configs/colors';
 import routes from '../../navigation/routes';
 
 import { user } from '../../mock/userData';
-import { Auth } from 'aws-amplify';
+import { API, Auth, graphqlOperation } from 'aws-amplify';
+import { listUsers } from '../../../src/graphql/queries';
 
 
 const ProfileScreen = ( { navigation } ) => {
+    const[data,setData]= React.useState([])
 
+    React.useEffect(()=>{
+        getdata();
+    }
+        
+        ,[]
+    )
+    const getdata = async()=>{
+        try {
+            const mdata = await API.graphql(graphqlOperation(listUsers))
+            console.log(mdata);
+            const list=mdata.data.listUsers.items
+            console.log(list);
+            setData(list)
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
+    console.log(data);
+
+   
+    const fetchUser = data;
     return (
         <Screen style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
@@ -31,7 +55,7 @@ const ProfileScreen = ( { navigation } ) => {
                     >
                         <ImageBackground
                             source={
-                                user.authenticated
+                                fetchUser.authenticated
                                 ?
                                 require("../../assets/verified_tick_background.png")
                                 :
@@ -40,7 +64,7 @@ const ProfileScreen = ( { navigation } ) => {
                             style={styles.editButton}
                         >
                             {
-                                user.authenticated
+                                fetchUser.authenticated
                                 ?
                                 <MaterialCommunityIcons
                                     color={colors.white}
@@ -59,10 +83,10 @@ const ProfileScreen = ( { navigation } ) => {
 
                     <View style={styles.userDetails}>
                         <AppText style={styles.userName}>
-                            {user.userName}
+                            {fetchUser.userName}
                         </AppText>
 
-                        <AppText style={styles.userEmail}>{user.email}</AppText>
+                        <AppText style={styles.userEmail}>{fetchUser.email}</AppText>
                     </View>
                 </ImageBackground>
 

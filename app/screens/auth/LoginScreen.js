@@ -9,7 +9,8 @@ import Header from '../../components/ui/Header';
 import Screen from '../../components/Screen';
 
 import colors from '../../configs/colors';
-
+import { API, Auth } from 'aws-amplify';
+import { user } from '../../../src/models';
 import routes from '../../navigation/routes';
 
 
@@ -20,13 +21,38 @@ const validationSchema = Yup.object().shape({
 
 
 //Dummy login Credentials
-const LoginCredentials = {
-    email: "sushil.maurya@somaiya.edu",
-    password: "123456"
-};
+// const LoginCredentials = {
+//     email: "sushil.maurya@somaiya.edu",
+//     password: "123456"
+// };
 
 
 const LoginScreen = ( { navigation } ) => {
+    
+    const[data,setData]=useState([])
+
+    useEffect(()=>{
+        getdata();
+    }
+        
+        ,[]
+    )
+    const getdata = async()=>{
+        try {
+            const mdata = await API.graphql(graphqlOperation(listMilks))
+            console.log(mdata);
+            const list=mdata.data.listMilks.items
+            console.log(list);
+            setData(list)
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
+    console.log(data);
+
+   
+    const fetchListings = data;
 
     return (
         <Screen>

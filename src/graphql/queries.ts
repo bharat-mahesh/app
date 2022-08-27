@@ -81,6 +81,401 @@ export const syncMilks = /* GraphQL */ `
     }
   }
 `;
+export const getButter = /* GraphQL */ `
+  query GetButter($id: ID!) {
+    getButter(id: $id) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listButter = /* GraphQL */ `
+  query ListButter(
+    $filter: ModelButterFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listButter(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        image
+        farmName
+        itemName
+        price
+        minNoOfItemPurchase
+        availableQuantity
+        rating
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncButter = /* GraphQL */ `
+  query SyncButter(
+    $filter: ModelButterFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncButter(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        image
+        farmName
+        itemName
+        price
+        minNoOfItemPurchase
+        availableQuantity
+        rating
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getButterMilk = /* GraphQL */ `
+  query GetButterMilk($id: ID!) {
+    getButterMilk(id: $id) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listButterMilks = /* GraphQL */ `
+  query ListButterMilks(
+    $filter: ModelButterMilkFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listButterMilks(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        image
+        farmName
+        itemName
+        price
+        minNoOfItemPurchase
+        availableQuantity
+        rating
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncButterMilks = /* GraphQL */ `
+  query SyncButterMilks(
+    $filter: ModelButterMilkFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncButterMilks(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        image
+        farmName
+        itemName
+        price
+        minNoOfItemPurchase
+        availableQuantity
+        rating
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getPaneer = /* GraphQL */ `
+  query GetPaneer($id: ID!) {
+    getPaneer(id: $id) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listPaneers = /* GraphQL */ `
+  query ListPaneers(
+    $filter: ModelPaneerFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listPaneers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        image
+        farmName
+        itemName
+        price
+        minNoOfItemPurchase
+        availableQuantity
+        rating
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncPaneers = /* GraphQL */ `
+  query SyncPaneers(
+    $filter: ModelPaneerFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncPaneers(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        image
+        farmName
+        itemName
+        price
+        minNoOfItemPurchase
+        availableQuantity
+        rating
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getCheese = /* GraphQL */ `
+  query GetCheese($id: ID!) {
+    getCheese(id: $id) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listCheeses = /* GraphQL */ `
+  query ListCheeses(
+    $filter: ModelCheeseFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listCheeses(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        image
+        farmName
+        itemName
+        price
+        minNoOfItemPurchase
+        availableQuantity
+        rating
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncCheeses = /* GraphQL */ `
+  query SyncCheeses(
+    $filter: ModelCheeseFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncCheeses(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        image
+        farmName
+        itemName
+        price
+        minNoOfItemPurchase
+        availableQuantity
+        rating
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getMilkPowder = /* GraphQL */ `
+  query GetMilkPowder($id: ID!) {
+    getMilkPowder(id: $id) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listMilkPowders = /* GraphQL */ `
+  query ListMilkPowders(
+    $filter: ModelMilkPowderFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listMilkPowders(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        image
+        farmName
+        itemName
+        price
+        minNoOfItemPurchase
+        availableQuantity
+        rating
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncMilkPowders = /* GraphQL */ `
+  query SyncMilkPowders(
+    $filter: ModelMilkPowderFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncMilkPowders(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        image
+        farmName
+        itemName
+        price
+        minNoOfItemPurchase
+        availableQuantity
+        rating
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
 export const getCategories = /* GraphQL */ `
   query GetCategories($id: ID!) {
     getCategories(id: $id) {

@@ -9,6 +9,57 @@ availableQuantity:Int!
 rating: Int
 }
 
+type Butter @model @auth(rules: [{ allow: public }]){
+id:ID!
+image:String!
+farmName: String!
+itemName: String!
+price: Int!
+minNoOfItemPurchase:Int!
+availableQuantity:Int!
+rating: Int
+}
+
+type ButterMilk @model @auth(rules: [{ allow: public }]){
+id:ID!
+image:String!
+farmName: String!
+itemName: String!
+price: Int!
+minNoOfItemPurchase:Int!
+availableQuantity:Int!
+rating: Int
+}
+type Paneer @model @auth(rules: [{ allow: public }]){
+id:ID!
+image:String!
+farmName: String!
+itemName: String!
+price: Int!
+minNoOfItemPurchase:Int!
+availableQuantity:Int!
+rating: Int
+}
+type Cheese @model @auth(rules: [{ allow: public }]){
+id:ID!
+image:String!
+farmName: String!
+itemName: String!
+price: Int!
+minNoOfItemPurchase:Int!
+availableQuantity:Int!
+rating: Int
+}
+type MilkPowder @model @auth(rules: [{ allow: public }]){
+id:ID!
+image:String!
+farmName: String!
+itemName: String!
+price: Int!
+minNoOfItemPurchase:Int!
+availableQuantity:Int!
+rating: Int
+}
 type categories @model @auth(rules: [{ allow: public }]){
   id:ID!
   cardName:String!

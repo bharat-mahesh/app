@@ -68,6 +68,336 @@ export const deleteMilk = /* GraphQL */ `
     }
   }
 `;
+export const createButter = /* GraphQL */ `
+  mutation CreateButter(
+    $input: CreateButterInput!
+    $condition: ModelButterConditionInput
+  ) {
+    createButter(input: $input, condition: $condition) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const updateButter = /* GraphQL */ `
+  mutation UpdateButter(
+    $input: UpdateButterInput!
+    $condition: ModelButterConditionInput
+  ) {
+    updateButter(input: $input, condition: $condition) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const deleteButter = /* GraphQL */ `
+  mutation DeleteButter(
+    $input: DeleteButterInput!
+    $condition: ModelButterConditionInput
+  ) {
+    deleteButter(input: $input, condition: $condition) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const createButterMilk = /* GraphQL */ `
+  mutation CreateButterMilk(
+    $input: CreateButterMilkInput!
+    $condition: ModelButterMilkConditionInput
+  ) {
+    createButterMilk(input: $input, condition: $condition) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const updateButterMilk = /* GraphQL */ `
+  mutation UpdateButterMilk(
+    $input: UpdateButterMilkInput!
+    $condition: ModelButterMilkConditionInput
+  ) {
+    updateButterMilk(input: $input, condition: $condition) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const deleteButterMilk = /* GraphQL */ `
+  mutation DeleteButterMilk(
+    $input: DeleteButterMilkInput!
+    $condition: ModelButterMilkConditionInput
+  ) {
+    deleteButterMilk(input: $input, condition: $condition) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const createPaneer = /* GraphQL */ `
+  mutation CreatePaneer(
+    $input: CreatePaneerInput!
+    $condition: ModelPaneerConditionInput
+  ) {
+    createPaneer(input: $input, condition: $condition) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const updatePaneer = /* GraphQL */ `
+  mutation UpdatePaneer(
+    $input: UpdatePaneerInput!
+    $condition: ModelPaneerConditionInput
+  ) {
+    updatePaneer(input: $input, condition: $condition) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const deletePaneer = /* GraphQL */ `
+  mutation DeletePaneer(
+    $input: DeletePaneerInput!
+    $condition: ModelPaneerConditionInput
+  ) {
+    deletePaneer(input: $input, condition: $condition) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const createCheese = /* GraphQL */ `
+  mutation CreateCheese(
+    $input: CreateCheeseInput!
+    $condition: ModelCheeseConditionInput
+  ) {
+    createCheese(input: $input, condition: $condition) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const updateCheese = /* GraphQL */ `
+  mutation UpdateCheese(
+    $input: UpdateCheeseInput!
+    $condition: ModelCheeseConditionInput
+  ) {
+    updateCheese(input: $input, condition: $condition) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const deleteCheese = /* GraphQL */ `
+  mutation DeleteCheese(
+    $input: DeleteCheeseInput!
+    $condition: ModelCheeseConditionInput
+  ) {
+    deleteCheese(input: $input, condition: $condition) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const createMilkPowder = /* GraphQL */ `
+  mutation CreateMilkPowder(
+    $input: CreateMilkPowderInput!
+    $condition: ModelMilkPowderConditionInput
+  ) {
+    createMilkPowder(input: $input, condition: $condition) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const updateMilkPowder = /* GraphQL */ `
+  mutation UpdateMilkPowder(
+    $input: UpdateMilkPowderInput!
+    $condition: ModelMilkPowderConditionInput
+  ) {
+    updateMilkPowder(input: $input, condition: $condition) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const deleteMilkPowder = /* GraphQL */ `
+  mutation DeleteMilkPowder(
+    $input: DeleteMilkPowderInput!
+    $condition: ModelMilkPowderConditionInput
+  ) {
+    deleteMilkPowder(input: $input, condition: $condition) {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
 export const createCategories = /* GraphQL */ `
   mutation CreateCategories(
     $input: CreateCategoriesInput!

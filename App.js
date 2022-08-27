@@ -10,15 +10,26 @@ import AppNavigator from './app/navigation/AppNavigator';
 import AuthNavigator from './app/navigation/AuthNavigator';
 import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
+import { useState } from "react";
 
 function App() {
+
+  const userAuthenticated = useState(false);
   return (
     <NavigationContainer
         theme={navigationTheme}
     >
-        <AppNavigator />
+      {
+        userAuthenticated
+        ?
+        (
+          <AppNavigator />
+        ) : (
+          <AuthNavigator />
+        )
+      }
     </NavigationContainer>
   );
 }
 
-export default withAuthenticator(App)
+export default withAuthenticator(App) 

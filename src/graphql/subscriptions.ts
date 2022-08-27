@@ -59,6 +59,291 @@ export const onDeleteMilk = /* GraphQL */ `
     }
   }
 `;
+export const onCreateButter = /* GraphQL */ `
+  subscription OnCreateButter {
+    onCreateButter {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateButter = /* GraphQL */ `
+  subscription OnUpdateButter {
+    onUpdateButter {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteButter = /* GraphQL */ `
+  subscription OnDeleteButter {
+    onDeleteButter {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onCreateButterMilk = /* GraphQL */ `
+  subscription OnCreateButterMilk {
+    onCreateButterMilk {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateButterMilk = /* GraphQL */ `
+  subscription OnUpdateButterMilk {
+    onUpdateButterMilk {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteButterMilk = /* GraphQL */ `
+  subscription OnDeleteButterMilk {
+    onDeleteButterMilk {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onCreatePaneer = /* GraphQL */ `
+  subscription OnCreatePaneer {
+    onCreatePaneer {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdatePaneer = /* GraphQL */ `
+  subscription OnUpdatePaneer {
+    onUpdatePaneer {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeletePaneer = /* GraphQL */ `
+  subscription OnDeletePaneer {
+    onDeletePaneer {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onCreateCheese = /* GraphQL */ `
+  subscription OnCreateCheese {
+    onCreateCheese {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateCheese = /* GraphQL */ `
+  subscription OnUpdateCheese {
+    onUpdateCheese {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteCheese = /* GraphQL */ `
+  subscription OnDeleteCheese {
+    onDeleteCheese {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onCreateMilkPowder = /* GraphQL */ `
+  subscription OnCreateMilkPowder {
+    onCreateMilkPowder {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateMilkPowder = /* GraphQL */ `
+  subscription OnUpdateMilkPowder {
+    onUpdateMilkPowder {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteMilkPowder = /* GraphQL */ `
+  subscription OnDeleteMilkPowder {
+    onDeleteMilkPowder {
+      id
+      image
+      farmName
+      itemName
+      price
+      minNoOfItemPurchase
+      availableQuantity
+      rating
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
 export const onCreateCategories = /* GraphQL */ `
   subscription OnCreateCategories {
     onCreateCategories {

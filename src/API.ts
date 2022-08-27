@@ -113,6 +113,301 @@ export type DeleteMilkInput = {
   _version?: number | null,
 };
 
+export type CreateButterInput = {
+  id?: string | null,
+  image: string,
+  farmName: string,
+  itemName: string,
+  price: number,
+  minNoOfItemPurchase: number,
+  availableQuantity: number,
+  rating?: number | null,
+  _version?: number | null,
+};
+
+export type ModelButterConditionInput = {
+  image?: ModelStringInput | null,
+  farmName?: ModelStringInput | null,
+  itemName?: ModelStringInput | null,
+  price?: ModelIntInput | null,
+  minNoOfItemPurchase?: ModelIntInput | null,
+  availableQuantity?: ModelIntInput | null,
+  rating?: ModelIntInput | null,
+  and?: Array< ModelButterConditionInput | null > | null,
+  or?: Array< ModelButterConditionInput | null > | null,
+  not?: ModelButterConditionInput | null,
+};
+
+export type Butter = {
+  __typename: "Butter",
+  id: string,
+  image: string,
+  farmName: string,
+  itemName: string,
+  price: number,
+  minNoOfItemPurchase: number,
+  availableQuantity: number,
+  rating?: number | null,
+  createdAt: string,
+  updatedAt: string,
+  _version: number,
+  _deleted?: boolean | null,
+  _lastChangedAt: number,
+};
+
+export type UpdateButterInput = {
+  id: string,
+  image?: string | null,
+  farmName?: string | null,
+  itemName?: string | null,
+  price?: number | null,
+  minNoOfItemPurchase?: number | null,
+  availableQuantity?: number | null,
+  rating?: number | null,
+  _version?: number | null,
+};
+
+export type DeleteButterInput = {
+  id: string,
+  _version?: number | null,
+};
+
+export type CreateButterMilkInput = {
+  id?: string | null,
+  image: string,
+  farmName: string,
+  itemName: string,
+  price: number,
+  minNoOfItemPurchase: number,
+  availableQuantity: number,
+  rating?: number | null,
+  _version?: number | null,
+};
+
+export type ModelButterMilkConditionInput = {
+  image?: ModelStringInput | null,
+  farmName?: ModelStringInput | null,
+  itemName?: ModelStringInput | null,
+  price?: ModelIntInput | null,
+  minNoOfItemPurchase?: ModelIntInput | null,
+  availableQuantity?: ModelIntInput | null,
+  rating?: ModelIntInput | null,
+  and?: Array< ModelButterMilkConditionInput | null > | null,
+  or?: Array< ModelButterMilkConditionInput | null > | null,
+  not?: ModelButterMilkConditionInput | null,
+};
+
+export type ButterMilk = {
+  __typename: "ButterMilk",
+  id: string,
+  image: string,
+  farmName: string,
+  itemName: string,
+  price: number,
+  minNoOfItemPurchase: number,
+  availableQuantity: number,
+  rating?: number | null,
+  createdAt: string,
+  updatedAt: string,
+  _version: number,
+  _deleted?: boolean | null,
+  _lastChangedAt: number,
+};
+
+export type UpdateButterMilkInput = {
+  id: string,
+  image?: string | null,
+  farmName?: string | null,
+  itemName?: string | null,
+  price?: number | null,
+  minNoOfItemPurchase?: number | null,
+  availableQuantity?: number | null,
+  rating?: number | null,
+  _version?: number | null,
+};
+
+export type DeleteButterMilkInput = {
+  id: string,
+  _version?: number | null,
+};
+
+export type CreatePaneerInput = {
+  id?: string | null,
+  image: string,
+  farmName: string,
+  itemName: string,
+  price: number,
+  minNoOfItemPurchase: number,
+  availableQuantity: number,
+  rating?: number | null,
+  _version?: number | null,
+};
+
+export type ModelPaneerConditionInput = {
+  image?: ModelStringInput | null,
+  farmName?: ModelStringInput | null,
+  itemName?: ModelStringInput | null,
+  price?: ModelIntInput | null,
+  minNoOfItemPurchase?: ModelIntInput | null,
+  availableQuantity?: ModelIntInput | null,
+  rating?: ModelIntInput | null,
+  and?: Array< ModelPaneerConditionInput | null > | null,
+  or?: Array< ModelPaneerConditionInput | null > | null,
+  not?: ModelPaneerConditionInput | null,
+};
+
+export type Paneer = {
+  __typename: "Paneer",
+  id: string,
+  image: string,
+  farmName: string,
+  itemName: string,
+  price: number,
+  minNoOfItemPurchase: number,
+  availableQuantity: number,
+  rating?: number | null,
+  createdAt: string,
+  updatedAt: string,
+  _version: number,
+  _deleted?: boolean | null,
+  _lastChangedAt: number,
+};
+
+export type UpdatePaneerInput = {
+  id: string,
+  image?: string | null,
+  farmName?: string | null,
+  itemName?: string | null,
+  price?: number | null,
+  minNoOfItemPurchase?: number | null,
+  availableQuantity?: number | null,
+  rating?: number | null,
+  _version?: number | null,
+};
+
+export type DeletePaneerInput = {
+  id: string,
+  _version?: number | null,
+};
+
+export type CreateCheeseInput = {
+  id?: string | null,
+  image: string,
+  farmName: string,
+  itemName: string,
+  price: number,
+  minNoOfItemPurchase: number,
+  availableQuantity: number,
+  rating?: number | null,
+  _version?: number | null,
+};
+
+export type ModelCheeseConditionInput = {
+  image?: ModelStringInput | null,
+  farmName?: ModelStringInput | null,
+  itemName?: ModelStringInput | null,
+  price?: ModelIntInput | null,
+  minNoOfItemPurchase?: ModelIntInput | null,
+  availableQuantity?: ModelIntInput | null,
+  rating?: ModelIntInput | null,
+  and?: Array< ModelCheeseConditionInput | null > | null,
+  or?: Array< ModelCheeseConditionInput | null > | null,
+  not?: ModelCheeseConditionInput | null,
+};
+
+export type Cheese = {
+  __typename: "Cheese",
+  id: string,
+  image: string,
+  farmName: string,
+  itemName: string,
+  price: number,
+  minNoOfItemPurchase: number,
+  availableQuantity: number,
+  rating?: number | null,
+  createdAt: string,
+  updatedAt: string,
+  _version: number,
+  _deleted?: boolean | null,
+  _lastChangedAt: number,
+};
+
+export type UpdateCheeseInput = {
+  id: string,
+  image?: string | null,
+  farmName?: string | null,
+  itemName?: string | null,
+  price?: number | null,
+  minNoOfItemPurchase?: number | null,
+  availableQuantity?: number | null,
+  rating?: number | null,
+  _version?: number | null,
+};
+
+export type DeleteCheeseInput = {
+  id: string,
+  _version?: number | null,
+};
+
+export type CreateMilkPowderInput = {
+  id?: string | null,
+  image: string,
+  farmName: string,
+  itemName: string,
+  price: number,
+  minNoOfItemPurchase: number,
+  availableQuantity: number,
+  rating?: number | null,
+  _version?: number | null,
+};
+
+export type ModelMilkPowderConditionInput = {
+  image?: ModelStringInput | null,
+  farmName?: ModelStringInput | null,
+  itemName?: ModelStringInput | null,
+  price?: ModelIntInput | null,
+  minNoOfItemPurchase?: ModelIntInput | null,
+  availableQuantity?: ModelIntInput | null,
+  rating?: ModelIntInput | null,
+  and?: Array< ModelMilkPowderConditionInput | null > | null,
+  or?: Array< ModelMilkPowderConditionInput | null > | null,
+  not?: ModelMilkPowderConditionInput | null,
+};
+
+export type MilkPowder = {
+  __typename: "MilkPowder",
+  id: string,
+  image: string,
+  farmName: string,
+  itemName: string,
+  price: number,
+  minNoOfItemPurchase: number,
+  availableQuantity: number,
+  rating?: number | null,
+  createdAt: string,
+  updatedAt: string,
+  _version: number,
+  _deleted?: boolean | null,
+  _lastChangedAt: number,
+};
+
+export type UpdateMilkPowderInput = {
+  id: string,
+  image?: string | null,
+  farmName?: string | null,
+  itemName?: string | null,
+  price?: number | null,
+  minNoOfItemPurchase?: number | null,
+  availableQuantity?: number | null,
+  rating?: number | null,
+  _version?: number | null,
+};
+
+export type DeleteMilkPowderInput = {
+  id: string,
+  _version?: number | null,
+};
+
 export type CreateCategoriesInput = {
   id?: string | null,
   cardName: string,
@@ -467,6 +762,111 @@ export type ModelMilkConnection = {
   startedAt?: number | null,
 };
 
+export type ModelButterFilterInput = {
+  id?: ModelIDInput | null,
+  image?: ModelStringInput | null,
+  farmName?: ModelStringInput | null,
+  itemName?: ModelStringInput | null,
+  price?: ModelIntInput | null,
+  minNoOfItemPurchase?: ModelIntInput | null,
+  availableQuantity?: ModelIntInput | null,
+  rating?: ModelIntInput | null,
+  and?: Array< ModelButterFilterInput | null > | null,
+  or?: Array< ModelButterFilterInput | null > | null,
+  not?: ModelButterFilterInput | null,
+};
+
+export type ModelButterConnection = {
+  __typename: "ModelButterConnection",
+  items:  Array<Butter | null >,
+  nextToken?: string | null,
+  startedAt?: number | null,
+};
+
+export type ModelButterMilkFilterInput = {
+  id?: ModelIDInput | null,
+  image?: ModelStringInput | null,
+  farmName?: ModelStringInput | null,
+  itemName?: ModelStringInput | null,
+  price?: ModelIntInput | null,
+  minNoOfItemPurchase?: ModelIntInput | null,
+  availableQuantity?: ModelIntInput | null,
+  rating?: ModelIntInput | null,
+  and?: Array< ModelButterMilkFilterInput | null > | null,
+  or?: Array< ModelButterMilkFilterInput | null > | null,
+  not?: ModelButterMilkFilterInput | null,
+};
+
+export type ModelButterMilkConnection = {
+  __typename: "ModelButterMilkConnection",
+  items:  Array<ButterMilk | null >,
+  nextToken?: string | null,
+  startedAt?: number | null,
+};
+
+export type ModelPaneerFilterInput = {
+  id?: ModelIDInput | null,
+  image?: ModelStringInput | null,
+  farmName?: ModelStringInput | null,
+  itemName?: ModelStringInput | null,
+  price?: ModelIntInput | null,
+  minNoOfItemPurchase?: ModelIntInput | null,
+  availableQuantity?: ModelIntInput | null,
+  rating?: ModelIntInput | null,
+  and?: Array< ModelPaneerFilterInput | null > | null,
+  or?: Array< ModelPaneerFilterInput | null > | null,
+  not?: ModelPaneerFilterInput | null,
+};
+
+export type ModelPaneerConnection = {
+  __typename: "ModelPaneerConnection",
+  items:  Array<Paneer | null >,
+  nextToken?: string | null,
+  startedAt?: number | null,
+};
+
+export type ModelCheeseFilterInput = {
+  id?: ModelIDInput | null,
+  image?: ModelStringInput | null,
+  farmName?: ModelStringInput | null,
+  itemName?: ModelStringInput | null,
+  price?: ModelIntInput | null,
+  minNoOfItemPurchase?: ModelIntInput | null,
+  availableQuantity?: ModelIntInput | null,
+  rating?: ModelIntInput | null,
+  and?: Array< ModelCheeseFilterInput | null > | null,
+  or?: Array< ModelCheeseFilterInput | null > | null,
+  not?: ModelCheeseFilterInput | null,
+};
+
+export type ModelCheeseConnection = {
+  __typename: "ModelCheeseConnection",
+  items:  Array<Cheese | null >,
+  nextToken?: string | null,
+  startedAt?: number | null,
+};
+
+export type ModelMilkPowderFilterInput = {
+  id?: ModelIDInput | null,
+  image?: ModelStringInput | null,
+  farmName?: ModelStringInput | null,
+  itemName?: ModelStringInput | null,
+  price?: ModelIntInput | null,
+  minNoOfItemPurchase?: ModelIntInput | null,
+  availableQuantity?: ModelIntInput | null,
+  rating?: ModelIntInput | null,
+  and?: Array< ModelMilkPowderFilterInput | null > | null,
+  or?: Array< ModelMilkPowderFilterInput | null > | null,
+  not?: ModelMilkPowderFilterInput | null,
+};
+
+export type ModelMilkPowderConnection = {
+  __typename: "ModelMilkPowderConnection",
+  items:  Array<MilkPowder | null >,
+  nextToken?: string | null,
+  startedAt?: number | null,
+};
+
 export type ModelCategoriesFilterInput = {
   id?: ModelIDInput | null,
   cardName?: ModelStringInput | null,
@@ -631,6 +1031,366 @@ export type DeleteMilkMutationVariables = {
 export type DeleteMilkMutation = {
   deleteMilk?:  {
     __typename: "Milk",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type CreateButterMutationVariables = {
+  input: CreateButterInput,
+  condition?: ModelButterConditionInput | null,
+};
+
+export type CreateButterMutation = {
+  createButter?:  {
+    __typename: "Butter",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type UpdateButterMutationVariables = {
+  input: UpdateButterInput,
+  condition?: ModelButterConditionInput | null,
+};
+
+export type UpdateButterMutation = {
+  updateButter?:  {
+    __typename: "Butter",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type DeleteButterMutationVariables = {
+  input: DeleteButterInput,
+  condition?: ModelButterConditionInput | null,
+};
+
+export type DeleteButterMutation = {
+  deleteButter?:  {
+    __typename: "Butter",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type CreateButterMilkMutationVariables = {
+  input: CreateButterMilkInput,
+  condition?: ModelButterMilkConditionInput | null,
+};
+
+export type CreateButterMilkMutation = {
+  createButterMilk?:  {
+    __typename: "ButterMilk",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type UpdateButterMilkMutationVariables = {
+  input: UpdateButterMilkInput,
+  condition?: ModelButterMilkConditionInput | null,
+};
+
+export type UpdateButterMilkMutation = {
+  updateButterMilk?:  {
+    __typename: "ButterMilk",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type DeleteButterMilkMutationVariables = {
+  input: DeleteButterMilkInput,
+  condition?: ModelButterMilkConditionInput | null,
+};
+
+export type DeleteButterMilkMutation = {
+  deleteButterMilk?:  {
+    __typename: "ButterMilk",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type CreatePaneerMutationVariables = {
+  input: CreatePaneerInput,
+  condition?: ModelPaneerConditionInput | null,
+};
+
+export type CreatePaneerMutation = {
+  createPaneer?:  {
+    __typename: "Paneer",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type UpdatePaneerMutationVariables = {
+  input: UpdatePaneerInput,
+  condition?: ModelPaneerConditionInput | null,
+};
+
+export type UpdatePaneerMutation = {
+  updatePaneer?:  {
+    __typename: "Paneer",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type DeletePaneerMutationVariables = {
+  input: DeletePaneerInput,
+  condition?: ModelPaneerConditionInput | null,
+};
+
+export type DeletePaneerMutation = {
+  deletePaneer?:  {
+    __typename: "Paneer",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type CreateCheeseMutationVariables = {
+  input: CreateCheeseInput,
+  condition?: ModelCheeseConditionInput | null,
+};
+
+export type CreateCheeseMutation = {
+  createCheese?:  {
+    __typename: "Cheese",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type UpdateCheeseMutationVariables = {
+  input: UpdateCheeseInput,
+  condition?: ModelCheeseConditionInput | null,
+};
+
+export type UpdateCheeseMutation = {
+  updateCheese?:  {
+    __typename: "Cheese",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type DeleteCheeseMutationVariables = {
+  input: DeleteCheeseInput,
+  condition?: ModelCheeseConditionInput | null,
+};
+
+export type DeleteCheeseMutation = {
+  deleteCheese?:  {
+    __typename: "Cheese",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type CreateMilkPowderMutationVariables = {
+  input: CreateMilkPowderInput,
+  condition?: ModelMilkPowderConditionInput | null,
+};
+
+export type CreateMilkPowderMutation = {
+  createMilkPowder?:  {
+    __typename: "MilkPowder",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type UpdateMilkPowderMutationVariables = {
+  input: UpdateMilkPowderInput,
+  condition?: ModelMilkPowderConditionInput | null,
+};
+
+export type UpdateMilkPowderMutation = {
+  updateMilkPowder?:  {
+    __typename: "MilkPowder",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type DeleteMilkPowderMutationVariables = {
+  input: DeleteMilkPowderInput,
+  condition?: ModelMilkPowderConditionInput | null,
+};
+
+export type DeleteMilkPowderMutation = {
+  deleteMilkPowder?:  {
+    __typename: "MilkPowder",
     id: string,
     image: string,
     farmName: string,
@@ -1102,6 +1862,426 @@ export type SyncMilksQuery = {
     __typename: "ModelMilkConnection",
     items:  Array< {
       __typename: "Milk",
+      id: string,
+      image: string,
+      farmName: string,
+      itemName: string,
+      price: number,
+      minNoOfItemPurchase: number,
+      availableQuantity: number,
+      rating?: number | null,
+      createdAt: string,
+      updatedAt: string,
+      _version: number,
+      _deleted?: boolean | null,
+      _lastChangedAt: number,
+    } | null >,
+    nextToken?: string | null,
+    startedAt?: number | null,
+  } | null,
+};
+
+export type GetButterQueryVariables = {
+  id: string,
+};
+
+export type GetButterQuery = {
+  getButter?:  {
+    __typename: "Butter",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type ListButterQueryVariables = {
+  filter?: ModelButterFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+};
+
+export type ListButterQuery = {
+  listButter?:  {
+    __typename: "ModelButterConnection",
+    items:  Array< {
+      __typename: "Butter",
+      id: string,
+      image: string,
+      farmName: string,
+      itemName: string,
+      price: number,
+      minNoOfItemPurchase: number,
+      availableQuantity: number,
+      rating?: number | null,
+      createdAt: string,
+      updatedAt: string,
+      _version: number,
+      _deleted?: boolean | null,
+      _lastChangedAt: number,
+    } | null >,
+    nextToken?: string | null,
+    startedAt?: number | null,
+  } | null,
+};
+
+export type SyncButterQueryVariables = {
+  filter?: ModelButterFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+  lastSync?: number | null,
+};
+
+export type SyncButterQuery = {
+  syncButter?:  {
+    __typename: "ModelButterConnection",
+    items:  Array< {
+      __typename: "Butter",
+      id: string,
+      image: string,
+      farmName: string,
+      itemName: string,
+      price: number,
+      minNoOfItemPurchase: number,
+      availableQuantity: number,
+      rating?: number | null,
+      createdAt: string,
+      updatedAt: string,
+      _version: number,
+      _deleted?: boolean | null,
+      _lastChangedAt: number,
+    } | null >,
+    nextToken?: string | null,
+    startedAt?: number | null,
+  } | null,
+};
+
+export type GetButterMilkQueryVariables = {
+  id: string,
+};
+
+export type GetButterMilkQuery = {
+  getButterMilk?:  {
+    __typename: "ButterMilk",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type ListButterMilksQueryVariables = {
+  filter?: ModelButterMilkFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+};
+
+export type ListButterMilksQuery = {
+  listButterMilks?:  {
+    __typename: "ModelButterMilkConnection",
+    items:  Array< {
+      __typename: "ButterMilk",
+      id: string,
+      image: string,
+      farmName: string,
+      itemName: string,
+      price: number,
+      minNoOfItemPurchase: number,
+      availableQuantity: number,
+      rating?: number | null,
+      createdAt: string,
+      updatedAt: string,
+      _version: number,
+      _deleted?: boolean | null,
+      _lastChangedAt: number,
+    } | null >,
+    nextToken?: string | null,
+    startedAt?: number | null,
+  } | null,
+};
+
+export type SyncButterMilksQueryVariables = {
+  filter?: ModelButterMilkFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+  lastSync?: number | null,
+};
+
+export type SyncButterMilksQuery = {
+  syncButterMilks?:  {
+    __typename: "ModelButterMilkConnection",
+    items:  Array< {
+      __typename: "ButterMilk",
+      id: string,
+      image: string,
+      farmName: string,
+      itemName: string,
+      price: number,
+      minNoOfItemPurchase: number,
+      availableQuantity: number,
+      rating?: number | null,
+      createdAt: string,
+      updatedAt: string,
+      _version: number,
+      _deleted?: boolean | null,
+      _lastChangedAt: number,
+    } | null >,
+    nextToken?: string | null,
+    startedAt?: number | null,
+  } | null,
+};
+
+export type GetPaneerQueryVariables = {
+  id: string,
+};
+
+export type GetPaneerQuery = {
+  getPaneer?:  {
+    __typename: "Paneer",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type ListPaneersQueryVariables = {
+  filter?: ModelPaneerFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+};
+
+export type ListPaneersQuery = {
+  listPaneers?:  {
+    __typename: "ModelPaneerConnection",
+    items:  Array< {
+      __typename: "Paneer",
+      id: string,
+      image: string,
+      farmName: string,
+      itemName: string,
+      price: number,
+      minNoOfItemPurchase: number,
+      availableQuantity: number,
+      rating?: number | null,
+      createdAt: string,
+      updatedAt: string,
+      _version: number,
+      _deleted?: boolean | null,
+      _lastChangedAt: number,
+    } | null >,
+    nextToken?: string | null,
+    startedAt?: number | null,
+  } | null,
+};
+
+export type SyncPaneersQueryVariables = {
+  filter?: ModelPaneerFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+  lastSync?: number | null,
+};
+
+export type SyncPaneersQuery = {
+  syncPaneers?:  {
+    __typename: "ModelPaneerConnection",
+    items:  Array< {
+      __typename: "Paneer",
+      id: string,
+      image: string,
+      farmName: string,
+      itemName: string,
+      price: number,
+      minNoOfItemPurchase: number,
+      availableQuantity: number,
+      rating?: number | null,
+      createdAt: string,
+      updatedAt: string,
+      _version: number,
+      _deleted?: boolean | null,
+      _lastChangedAt: number,
+    } | null >,
+    nextToken?: string | null,
+    startedAt?: number | null,
+  } | null,
+};
+
+export type GetCheeseQueryVariables = {
+  id: string,
+};
+
+export type GetCheeseQuery = {
+  getCheese?:  {
+    __typename: "Cheese",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type ListCheesesQueryVariables = {
+  filter?: ModelCheeseFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+};
+
+export type ListCheesesQuery = {
+  listCheeses?:  {
+    __typename: "ModelCheeseConnection",
+    items:  Array< {
+      __typename: "Cheese",
+      id: string,
+      image: string,
+      farmName: string,
+      itemName: string,
+      price: number,
+      minNoOfItemPurchase: number,
+      availableQuantity: number,
+      rating?: number | null,
+      createdAt: string,
+      updatedAt: string,
+      _version: number,
+      _deleted?: boolean | null,
+      _lastChangedAt: number,
+    } | null >,
+    nextToken?: string | null,
+    startedAt?: number | null,
+  } | null,
+};
+
+export type SyncCheesesQueryVariables = {
+  filter?: ModelCheeseFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+  lastSync?: number | null,
+};
+
+export type SyncCheesesQuery = {
+  syncCheeses?:  {
+    __typename: "ModelCheeseConnection",
+    items:  Array< {
+      __typename: "Cheese",
+      id: string,
+      image: string,
+      farmName: string,
+      itemName: string,
+      price: number,
+      minNoOfItemPurchase: number,
+      availableQuantity: number,
+      rating?: number | null,
+      createdAt: string,
+      updatedAt: string,
+      _version: number,
+      _deleted?: boolean | null,
+      _lastChangedAt: number,
+    } | null >,
+    nextToken?: string | null,
+    startedAt?: number | null,
+  } | null,
+};
+
+export type GetMilkPowderQueryVariables = {
+  id: string,
+};
+
+export type GetMilkPowderQuery = {
+  getMilkPowder?:  {
+    __typename: "MilkPowder",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type ListMilkPowdersQueryVariables = {
+  filter?: ModelMilkPowderFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+};
+
+export type ListMilkPowdersQuery = {
+  listMilkPowders?:  {
+    __typename: "ModelMilkPowderConnection",
+    items:  Array< {
+      __typename: "MilkPowder",
+      id: string,
+      image: string,
+      farmName: string,
+      itemName: string,
+      price: number,
+      minNoOfItemPurchase: number,
+      availableQuantity: number,
+      rating?: number | null,
+      createdAt: string,
+      updatedAt: string,
+      _version: number,
+      _deleted?: boolean | null,
+      _lastChangedAt: number,
+    } | null >,
+    nextToken?: string | null,
+    startedAt?: number | null,
+  } | null,
+};
+
+export type SyncMilkPowdersQueryVariables = {
+  filter?: ModelMilkPowderFilterInput | null,
+  limit?: number | null,
+  nextToken?: string | null,
+  lastSync?: number | null,
+};
+
+export type SyncMilkPowdersQuery = {
+  syncMilkPowders?:  {
+    __typename: "ModelMilkPowderConnection",
+    items:  Array< {
+      __typename: "MilkPowder",
       id: string,
       image: string,
       farmName: string,
@@ -1624,6 +2804,291 @@ export type OnUpdateMilkSubscription = {
 export type OnDeleteMilkSubscription = {
   onDeleteMilk?:  {
     __typename: "Milk",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type OnCreateButterSubscription = {
+  onCreateButter?:  {
+    __typename: "Butter",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type OnUpdateButterSubscription = {
+  onUpdateButter?:  {
+    __typename: "Butter",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type OnDeleteButterSubscription = {
+  onDeleteButter?:  {
+    __typename: "Butter",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type OnCreateButterMilkSubscription = {
+  onCreateButterMilk?:  {
+    __typename: "ButterMilk",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type OnUpdateButterMilkSubscription = {
+  onUpdateButterMilk?:  {
+    __typename: "ButterMilk",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type OnDeleteButterMilkSubscription = {
+  onDeleteButterMilk?:  {
+    __typename: "ButterMilk",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type OnCreatePaneerSubscription = {
+  onCreatePaneer?:  {
+    __typename: "Paneer",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type OnUpdatePaneerSubscription = {
+  onUpdatePaneer?:  {
+    __typename: "Paneer",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type OnDeletePaneerSubscription = {
+  onDeletePaneer?:  {
+    __typename: "Paneer",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type OnCreateCheeseSubscription = {
+  onCreateCheese?:  {
+    __typename: "Cheese",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type OnUpdateCheeseSubscription = {
+  onUpdateCheese?:  {
+    __typename: "Cheese",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type OnDeleteCheeseSubscription = {
+  onDeleteCheese?:  {
+    __typename: "Cheese",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type OnCreateMilkPowderSubscription = {
+  onCreateMilkPowder?:  {
+    __typename: "MilkPowder",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type OnUpdateMilkPowderSubscription = {
+  onUpdateMilkPowder?:  {
+    __typename: "MilkPowder",
+    id: string,
+    image: string,
+    farmName: string,
+    itemName: string,
+    price: number,
+    minNoOfItemPurchase: number,
+    availableQuantity: number,
+    rating?: number | null,
+    createdAt: string,
+    updatedAt: string,
+    _version: number,
+    _deleted?: boolean | null,
+    _lastChangedAt: number,
+  } | null,
+};
+
+export type OnDeleteMilkPowderSubscription = {
+  onDeleteMilkPowder?:  {
+    __typename: "MilkPowder",
     id: string,
     image: string,
     farmName: string,

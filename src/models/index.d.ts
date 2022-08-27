@@ -8,6 +8,26 @@ type MilkMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
+type ButterMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+type ButterMilkMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+type PaneerMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+type CheeseMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+type MilkPowderMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
 type categoriesMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
@@ -45,6 +65,81 @@ export declare class Milk {
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<Milk, MilkMetaData>);
   static copyOf(source: Milk, mutator: (draft: MutableModel<Milk, MilkMetaData>) => MutableModel<Milk, MilkMetaData> | void): Milk;
+}
+
+export declare class Butter {
+  readonly id: string;
+  readonly image: string;
+  readonly farmName: string;
+  readonly itemName: string;
+  readonly price: number;
+  readonly minNoOfItemPurchase: number;
+  readonly availableQuantity: number;
+  readonly rating?: number | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+  constructor(init: ModelInit<Butter, ButterMetaData>);
+  static copyOf(source: Butter, mutator: (draft: MutableModel<Butter, ButterMetaData>) => MutableModel<Butter, ButterMetaData> | void): Butter;
+}
+
+export declare class ButterMilk {
+  readonly id: string;
+  readonly image: string;
+  readonly farmName: string;
+  readonly itemName: string;
+  readonly price: number;
+  readonly minNoOfItemPurchase: number;
+  readonly availableQuantity: number;
+  readonly rating?: number | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+  constructor(init: ModelInit<ButterMilk, ButterMilkMetaData>);
+  static copyOf(source: ButterMilk, mutator: (draft: MutableModel<ButterMilk, ButterMilkMetaData>) => MutableModel<ButterMilk, ButterMilkMetaData> | void): ButterMilk;
+}
+
+export declare class Paneer {
+  readonly id: string;
+  readonly image: string;
+  readonly farmName: string;
+  readonly itemName: string;
+  readonly price: number;
+  readonly minNoOfItemPurchase: number;
+  readonly availableQuantity: number;
+  readonly rating?: number | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+  constructor(init: ModelInit<Paneer, PaneerMetaData>);
+  static copyOf(source: Paneer, mutator: (draft: MutableModel<Paneer, PaneerMetaData>) => MutableModel<Paneer, PaneerMetaData> | void): Paneer;
+}
+
+export declare class Cheese {
+  readonly id: string;
+  readonly image: string;
+  readonly farmName: string;
+  readonly itemName: string;
+  readonly price: number;
+  readonly minNoOfItemPurchase: number;
+  readonly availableQuantity: number;
+  readonly rating?: number | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+  constructor(init: ModelInit<Cheese, CheeseMetaData>);
+  static copyOf(source: Cheese, mutator: (draft: MutableModel<Cheese, CheeseMetaData>) => MutableModel<Cheese, CheeseMetaData> | void): Cheese;
+}
+
+export declare class MilkPowder {
+  readonly id: string;
+  readonly image: string;
+  readonly farmName: string;
+  readonly itemName: string;
+  readonly price: number;
+  readonly minNoOfItemPurchase: number;
+  readonly availableQuantity: number;
+  readonly rating?: number | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+  constructor(init: ModelInit<MilkPowder, MilkPowderMetaData>);
+  static copyOf(source: MilkPowder, mutator: (draft: MutableModel<MilkPowder, MilkPowderMetaData>) => MutableModel<MilkPowder, MilkPowderMetaData> | void): MilkPowder;
 }
 
 export declare class categories {

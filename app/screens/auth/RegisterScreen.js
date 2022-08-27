@@ -11,6 +11,8 @@ import Screen from '../../components/Screen';
 import colors from '../../configs/colors';
 
 import routes from '../../navigation/routes';
+import { API, graphqlOperation } from 'aws-amplify';
+import { createUser } from '../../../src/graphql/mutations';
 
 
 const phoneRegExp = /^[1-9]{10}$/;
@@ -24,6 +26,32 @@ const validationSchema = Yup.object().shape({
 });
 
 const RegisterScreen = ( { navigation } ) => {
+
+    const[data,setData]=useState([])
+
+    useEffect(()=>{
+        getdata();
+    }
+        
+        ,[]
+    )
+    const getdata = async()=>{
+        try {
+            const mdata = await API.graphql(graphqlOperation(createUser))
+            console.log(mdata);
+            const list=mdata.data.listMilks.items
+            console.log(list);
+            setData(list)
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
+    console.log(data);
+
+   
+    const fetchListings = data;
+
 
     return (
         <Screen>
